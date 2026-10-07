@@ -106,9 +106,7 @@ export default function DownloadPage({ onBackToHome }) {
             </span>
           </a>
 
-          <div className="text-xs font-bold text-slate-500 hidden sm:block">
-            Portal Unduh Resmi APK
-          </div>
+
         </div>
       </header>
 
