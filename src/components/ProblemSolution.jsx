@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ShieldAlert, 
   Trash2, 
@@ -9,11 +9,17 @@ import {
   CheckCircle2,
   AlertTriangle,
   ArrowRight,
-  TrendingDown
+  TrendingDown,
+  ChevronDown
 } from 'lucide-react';
 
 export default function ProblemSolution() {
   const [activeTab, setActiveTab] = useState('with');
+  const [expandedDropdown, setExpandedDropdown] = useState(0);
+
+  const toggleDropdown = (index) => {
+    setExpandedDropdown((prev) => (prev === index ? null : index));
+  };
 
   const challenges = [
     {
@@ -156,7 +162,7 @@ export default function ProblemSolution() {
               </h3>
             </div>
 
-            <div className="inline-flex p-1 rounded-xl bg-slate-100 border border-slate-200">
+            <div className="hidden md:inline-flex p-1 rounded-xl bg-slate-100 border border-slate-200">
               <button
                 onClick={() => setActiveTab('with')}
                 className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all ${
@@ -180,7 +186,85 @@ export default function ProblemSolution() {
             </div>
           </div>
 
-          <div className="overflow-x-auto">
+          {/* Mobile View: Dropdown Accordion (< md) */}
+          <div className="md:hidden space-y-2.5">
+            {comparisonRows.map((row, i) => {
+              const isOpen = expandedDropdown === i;
+              return (
+                <div
+                  key={i}
+                  className="rounded-2xl border border-slate-200/80 overflow-hidden bg-white/95 shadow-xs transition-all"
+                >
+                  <button
+                    type="button"
+                    onClick={() => toggleDropdown(i)}
+                    className={`w-full flex items-center justify-between p-3.5 text-left transition-colors ${
+                      isOpen ? 'bg-slate-50/90' : 'bg-white hover:bg-slate-50/50'
+                    }`}
+                  >
+                    <div className="flex items-center gap-2.5">
+                      <span className={`w-6 h-6 rounded-lg text-xs font-bold flex items-center justify-center shrink-0 transition-colors ${
+                        isOpen ? 'bg-primary text-white' : 'bg-slate-100 text-slate-500'
+                      }`}>
+                        {i + 1}
+                      </span>
+                      <span className="text-xs sm:text-sm text-slate-800 font-bold">
+                        {row.feature}
+                      </span>
+                    </div>
+                    <ChevronDown
+                      className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
+                        isOpen ? 'rotate-180 text-primary' : ''
+                      }`}
+                    />
+                  </button>
+
+                  <AnimatePresence initial={false}>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="p-3.5 pt-1 space-y-2.5 border-t border-slate-100">
+                          {/* Konvensional */}
+                          <div className="p-3 rounded-xl bg-rose-50/60 border border-rose-100">
+                            <div className="flex items-center gap-1.5 mb-1 text-rose-700">
+                              <X className="w-3.5 h-3.5" />
+                              <span className="text-[11px] font-bold uppercase tracking-wide">
+                                Konvensional
+                              </span>
+                            </div>
+                            <p className="text-xs text-slate-600 pl-5 leading-relaxed">
+                              {row.withoutApp}
+                            </p>
+                          </div>
+
+                          {/* Dengan NutriTrace */}
+                          <div className="p-3 rounded-xl bg-emerald-50/50 border border-emerald-100">
+                            <div className="flex items-center gap-1.5 mb-1 text-emerald-800">
+                              <Check className="w-3.5 h-3.5 text-emerald-600" />
+                              <span className="text-[11px] font-bold uppercase tracking-wide">
+                                Dengan NutriTrace
+                              </span>
+                            </div>
+                            <p className="text-xs text-slate-800 pl-5 leading-relaxed font-medium">
+                              {row.withApp}
+                            </p>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Desktop & Tablet View: Table (>= md) */}
+          <div className="hidden md:block overflow-x-auto">
             <table className="w-full text-left text-xs sm:text-sm">
               <thead>
                 <tr className="border-b border-slate-200 text-slate-400 uppercase text-[11px] font-bold">

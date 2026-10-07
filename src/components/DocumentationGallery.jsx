@@ -74,7 +74,7 @@ export default function DocumentationGallery() {
     : galleryItems.filter(item => item.category === activeFilter);
 
   return (
-    <section id="dokumentasi" className="py-20 md:py-24 relative">
+    <section id="dokumentasi" className="py-10 lg:py-20 md:py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header with concise text */}

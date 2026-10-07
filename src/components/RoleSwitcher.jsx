@@ -93,7 +93,7 @@ export default function RoleSwitcher({ onOpenReportModal, currentRole, onRoleCha
             <span>Mode Pengguna</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-800 tracking-tight">
-            Antarmuka Siswa & Satgas MBG
+            Antarmuka Siswa & PIC Sekolah
           </h2>
           <p className="text-sm sm:text-base text-slate-600">
             Pilih mode untuk menguji coba fitur langsung di halaman ini.
@@ -122,7 +122,7 @@ export default function RoleSwitcher({ onOpenReportModal, currentRole, onRoleCha
               }`}
             >
               <ShieldCheck className="w-4 h-4" />
-              <span>Mode Satgas (QC & Surplus)</span>
+              <span>Mode PIC Sekolah (QC & Surplus)</span>
             </button>
           </div>
         </div>

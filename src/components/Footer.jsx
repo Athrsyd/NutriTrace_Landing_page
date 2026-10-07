@@ -1,5 +1,29 @@
 import React from 'react';
 import { Leaf, ArrowUp, MapPin } from 'lucide-react';
+import sdg2Logo from '../assets/logo-sdgs/E_WEB_02.png';
+import sdg12Logo from '../assets/logo-sdgs/E_WEB_12.png';
+import sdg13Logo from '../assets/logo-sdgs/E_WEB_13.png';
+
+const sdgList = [
+  {
+    id: '02',
+    title: 'SDG 2: Tanpa Kelaparan',
+    description: 'Memastikan mutu gizi MBG terserap optimal tanpa basi.',
+    logo: sdg2Logo,
+  },
+  {
+    id: '12',
+    title: 'SDG 12: Konsumsi Bertanggung Jawab',
+    description: 'Clean Plate Check-in menghentikan limbah sisa makanan.',
+    logo: sdg12Logo,
+  },
+  {
+    id: '13',
+    title: 'SDG 13: Penanganan Perubahan Iklim',
+    description: 'Mereduksi gas metana lewat biokonversi pakan larva BSF.',
+    logo: sdg13Logo,
+  },
+];
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -9,29 +33,36 @@ export default function Footer() {
   return (
     <footer className="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Top Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
-          
+
           {/* Col 1: Brand & Purpose */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-600 flex items-center justify-center text-white shadow-md shadow-primary/20">
-                <Leaf className="w-5 h-5 -rotate-12" />
+            <a href="#" className="flex items-center gap-3 group">
+              <img src="./logo.png" alt="" className='w-10 h-10 rounded-xl ' />
+              <div className="flex flex-col">
+                <div className="flex items-center gap-1.5">
+                  <span className="font-extrabold text-xl tracking-tight text-white">
+                    Nutri<span className="text-primary">Trace</span>
+                  </span>
+
+                </div>
+                <span className="text-[11px] font-medium text-slate-500 hidden sm:inline-block">
+                  Smart QC MBG & Zero Waste App
+                </span>
               </div>
-              <span className="font-black text-2xl tracking-tight text-white">
-                Nutri<span className="text-primary">Trace</span>
-              </span>
-            </div>
-            
+            </a>
+
             <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
-              Platform pendamping Program Makan Bergizi Gratis (MBG) berbasis Android Native 
-              untuk memastikan kualitas makanan harian, mengeliminasi food waste, dan menggerakkan 
+              Platform pendamping Program Makan Bergizi Gratis (MBG) berbasis Android Native
+              untuk memastikan kualitas makanan harian, mengeliminasi food waste, dan menggerakkan
               ekonomi sirkular di lingkungan sekolah.
             </p>
 
             <div className="flex items-center gap-2 pt-2 text-xs text-slate-400">
-              <MapPin className="w-4 h-4 text-primary shrink-0" />
+              <img src="logo_dunem.png" alt="" className='w-10 h-10 rounded-xl ' />
+
               <span>SMK Negeri 26 Jakarta (STM Pembangunan) • DKI Jakarta</span>
             </div>
           </div>
@@ -67,6 +98,11 @@ export default function Footer() {
                   Ekosistem Ekonomi Sirkular
                 </a>
               </li>
+              <li>
+                <a href="#download" className="text-tangerine hover:text-tangerine-600 font-bold transition-colors">
+                  Unduh Aplikasi Android (APK)
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -76,35 +112,22 @@ export default function Footer() {
               Pilar Keberlanjutan PBB (SDGs)
             </h4>
             <div className="space-y-2 text-xs">
-              <div className="p-3 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-center gap-3">
-                <span className="w-8 h-8 rounded-lg bg-amber-600 text-white font-black flex items-center justify-center shrink-0">
-                  02
-                </span>
-                <div>
-                  <p className="font-bold text-white">SDG 2: Tanpa Kelaparan</p>
-                  <p className="text-slate-400 text-[11px]">Memastikan mutu gizi MBG terserap optimal tanpa basi.</p>
+              {sdgList.map((sdg) => (
+                <div
+                  key={sdg.id}
+                  className="p-3 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-center gap-3 hover:border-slate-600 transition-colors"
+                >
+                  <img
+                    src={sdg.logo}
+                    alt={sdg.title}
+                    className="w-10 h-10 rounded-lg shrink-0 object-cover"
+                  />
+                  <div>
+                    <p className="font-bold text-white">{sdg.title}</p>
+                    <p className="text-slate-400 text-[11px]">{sdg.description}</p>
+                  </div>
                 </div>
-              </div>
-
-              <div className="p-3 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-center gap-3">
-                <span className="w-8 h-8 rounded-lg bg-orange-600 text-white font-black flex items-center justify-center shrink-0">
-                  12
-                </span>
-                <div>
-                  <p className="font-bold text-white">SDG 12: Konsumsi Bertanggung Jawab</p>
-                  <p className="text-slate-400 text-[11px]">Clean Plate Check-in menghentikan limbah sisa makanan.</p>
-                </div>
-              </div>
-
-              <div className="p-3 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-center gap-3">
-                <span className="w-8 h-8 rounded-lg bg-emerald-700 text-white font-black flex items-center justify-center shrink-0">
-                  13
-                </span>
-                <div>
-                  <p className="font-bold text-white">SDG 13: Penanganan Perubahan Iklim</p>
-                  <p className="text-slate-400 text-[11px]">Mereduksi gas metana lewat biokonversi pakan larva BSF.</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
@@ -115,10 +138,10 @@ export default function Footer() {
           <div>
             <p>
               © 2026 <strong className="text-slate-300 font-semibold">NutriTrace</strong>. Dirancang & Dikembangkan oleh{' '}
-              <strong className="text-slate-300 font-semibold">Lutfi Idham Puro</strong> (SMKN 26 Jakarta).
+              <strong className="text-slate-300 font-semibold">Tim eSDoGer&apos;s</strong> (SMKN 26 Jakarta).
             </p>
             <p className="mt-0.5 text-[11px]">
-              Dokumen Proposal Kompetisi Befeest Binus University 2026 • Kategori Rekayasa Perangkat Lunak.
+              Kompetisi Jakarta SDG&apos;s Futuremaker | Badan Perencanaan Pembangunan Daerah Provinsi DKI Jakarta
             </p>
           </div>
 

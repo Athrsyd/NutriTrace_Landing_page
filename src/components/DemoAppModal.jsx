@@ -77,7 +77,7 @@ export default function DemoAppModal({ isOpen, onClose }) {
               <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
                 <div className="flex items-center gap-2 font-bold text-slate-800">
                   <ShieldCheck className="w-4 h-4 text-tangerine" />
-                  <span>Untuk Satgas & Koordinator</span>
+                  <span>Untuk PIC Sekolah</span>
                 </div>
                 <ul className="space-y-1 text-slate-600 text-[11px]">
                   <li>• Input QC kedatangan katering &lt; 2 menit</li>

@@ -58,7 +58,7 @@ export default function CircularEconomy() {
   ];
 
   return (
-    <section id="sirkular" className="py-20 md:py-24 relative">
+    <section id="sirkular" className="py-10 lg:py-20  md:py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header - Concise */}
@@ -81,10 +81,13 @@ export default function CircularEconomy() {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
             {loopStages.map((stage, idx) => {
               const Icon = stage.icon;
+              const isLast = idx === loopStages.length - 1;
               return (
                 <div 
                   key={stage.id}
-                  className="flex flex-col items-center text-center p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:shadow-xs transition-all"
+                  className={`flex flex-col items-center text-center p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:shadow-xs transition-all ${
+                    isLast ? 'col-span-2 w-[calc(50%-0.375rem)] mx-auto md:col-span-1 md:w-full md:mx-0' : ''
+                  }`}
                 >
                   <span className="text-[10px] font-black uppercase text-slate-400 mb-2">
                     0{stage.id}

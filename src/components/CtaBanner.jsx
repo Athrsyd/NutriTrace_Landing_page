@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight, ShieldCheck, HeartHandshake, Leaf, Trophy } from 'lucide-react';
 
-export default function CtaBanner({ onOpenDemoModal, onCalculatorClick }) {
+export default function CtaBanner({ onOpenDemoModal, onCalculatorClick, onNavigateToDownload }) {
   return (
     <section className="py-16 md:py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,11 +35,11 @@ export default function CtaBanner({ onOpenDemoModal, onCalculatorClick }) {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <button
-                onClick={onOpenDemoModal}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl bg-tangerine hover:bg-tangerine-600 text-white font-extrabold text-base shadow-xl shadow-tangerine/30 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0"
+                onClick={onNavigateToDownload || onOpenDemoModal}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl bg-tangerine hover:bg-tangerine-600 text-white font-extrabold text-base shadow-xl shadow-tangerine/30 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 cursor-pointer"
               >
                 <Sparkles className="w-5 h-5" />
-                <span>Buka Aplikasi MBG Sekarang</span>
+                <span>Unduh Aplikasi NutriTrace Sekarang</span>
               </button>
 
               <button
