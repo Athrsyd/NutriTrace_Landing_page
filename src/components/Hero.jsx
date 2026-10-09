@@ -4,12 +4,13 @@ import {
   ShieldCheck,
   Flame,
   ArrowRight,
-  Calculator
+  Calculator,
+  Download
 } from 'lucide-react';
 
 export default function Hero({ onExploreClick, onCalculatorClick }) {
   return (
-    <section className="relative pt-18 pb-4 lg:pt-20 lg:pb-6 min-h-[calc(100vh-4rem)] flex items-center overflow-hidden">
+    <section className="relative pt-28 pb-8 sm:pt-32 sm:pb-12 lg:pt-32 lg:pb-16 lg:min-h-[calc(100vh-4rem)] flex items-center overflow-hidden">
       {/* Decorative ambient gradients (subtle glow) */}
       <div className="absolute top-10 left-1/2 -translate-x-1/2 w-full max-w-6xl h-96 bg-gradient-to-br from-sage/15 via-primary/5 to-transparent blur-3xl pointer-events-none -z-10" />
       <div className="absolute top-40 right-10 w-52 h-52 rounded-full bg-tangerine/5 blur-3xl pointer-events-none -z-10" />
@@ -22,7 +23,7 @@ export default function Hero({ onExploreClick, onCalculatorClick }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-7 flex flex-col gap-4 text-center lg:text-left ml-12"
+            className="lg:col-span-7 flex flex-col gap-4 text-center lg:text-left"
           >
             {/* Tagline Badge */}
             {/* <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/80 backdrop-blur-md border border-primary/30 shadow-xs">
@@ -33,8 +34,10 @@ export default function Hero({ onExploreClick, onCalculatorClick }) {
             </div> */}
 
             {/* Headline */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[44px] font-black tracking-tight text-slate-800 leading-10">
-              Kawal Mutu Makanan, Biasakan Santap Habis Lewat{' '} <br />
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[44px] font-black tracking-tight text-slate-800 leading-snug sm:leading-tight lg:leading-[1.15]">
+              Kawal Mutu Makanan, Biasakan Santap Habis{' '}
+              <br className="hidden sm:inline" />
+              <span>Lewat </span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-600 underline decoration-container decoration-wavy decoration-2">
                 Gerakan Piring Bersih
               </span>
@@ -56,13 +59,15 @@ export default function Hero({ onExploreClick, onCalculatorClick }) {
                 <ArrowRight className="w-4 h-4" />
               </button>
 
-              <button
-                onClick={onCalculatorClick}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl border-2 border-primary text-primary font-bold text-sm bg-white/60 backdrop-blur-sm hover:bg-primary-50 transition-all duration-200 cursor-pointer"
-              >
-                <Calculator className="w-4 h-4 text-primary" />
-                <span>Simulasi Dampak</span>
-              </button>
+              <a href="#download" className="w-full sm:w-auto">
+                <button
+
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-2xl border-2 border-primary text-primary font-bold text-sm bg-white/60 backdrop-blur-sm hover:bg-primary-50 transition-all duration-200 cursor-pointer"
+                >
+                  <Download className="w-4 h-4 text-primary mr-2" />
+                  <span>Download Aplikasi</span>
+                </button>
+              </a>
             </div>
 
             {/* Photo Highlights Strip */}
@@ -104,7 +109,7 @@ export default function Hero({ onExploreClick, onCalculatorClick }) {
             className="lg:col-span-5 relative flex justify-center items-center py-2"
           >
             {/* Smartphone Wrapper: Height strictly 70vh, slightly wider 9/17 aspect ratio */}
-            <div className="relative h-[65vh] lg:h-[70vh] max-h-[580px] min-h-[380px] aspect-[9/17] w-auto">
+            <div className="relative h-[55vh] sm:h-[65vh] lg:h-[70vh] max-h-[580px] min-h-[340px] aspect-[9/17] w-auto mx-auto">
 
               {/* Outer Phone Bezel Frame with softer, smaller shadow */}
               <div className="relative w-full h-full rounded-[38px] p-2 sm:p-2.5 bg-gradient-to-b from-slate-800 via-slate-900 to-slate-950 shadow-md shadow-slate-900/15 ring-1 ring-slate-800/50 flex flex-col">

@@ -23,7 +23,7 @@ export default function DocumentationGallery() {
       id: 1,
       category: 'qc',
       title: 'Pemeriksaan Makanan Saat Tiba',
-      location: 'Kantin Utama SMKN 26',
+      location: 'RBTRA SMKN 26 Jakarta',
       time: '09:42 WIB',
       badge: 'Aman & Bersih',
       badgeColor: 'bg-emerald-500 text-white',
@@ -35,7 +35,7 @@ export default function DocumentationGallery() {
       id: 2,
       category: 'siswa',
       title: 'Siswa Menghabiskan Makanan Tanpa Sisa',
-      location: 'Ruang Kelas XII RPL 1',
+      location: 'Ruang Kelas Masing-masing',
       time: '12:15 WIB',
       badge: 'Piring Bersih',
       badgeColor: 'bg-primary text-white',
@@ -47,7 +47,7 @@ export default function DocumentationGallery() {
       id: 3,
       category: 'maggot',
       title: 'Pengolahan Sisa Makanan Ramah Lingkungan',
-      location: 'Eco-Station SMKN 26',
+      location: 'Tempat pengolahan limba SMKN 26',
       time: '13:00 WIB',
       badge: 'Daur Ulang Sisa',
       badgeColor: 'bg-container text-slate-800',
@@ -59,7 +59,7 @@ export default function DocumentationGallery() {
       id: 4,
       category: 'koperasi',
       title: 'Penukaran Hadiah Apresiasi Siswa',
-      location: 'Koperasi Siswa Mandiri',
+      location: 'Koperasi SMKN 26 Jakarta',
       time: '13:30 WIB',
       badge: 'Hadiah Apresiasi',
       badgeColor: 'bg-tangerine text-white',
@@ -192,10 +192,10 @@ export default function DocumentationGallery() {
                   {/* Card Content */}
                   <div className="p-4 flex-1 flex flex-col justify-between space-y-2">
                     <div>
-                      <h4 className="font-extrabold text-sm text-slate-800 line-clamp-1 group-hover:text-primary transition-colors">
+                      <h4 className="font-extrabold text-sm text-slate-800 leading-snug group-hover:text-primary transition-colors">
                         {item.title}
                       </h4>
-                      <p className="text-xs text-slate-500 line-clamp-2 mt-1 leading-relaxed">
+                      <p className="text-xs text-slate-500 mt-1 leading-relaxed">
                         {item.desc}
                       </p>
                     </div>

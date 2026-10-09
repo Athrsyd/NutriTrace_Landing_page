@@ -359,7 +359,7 @@ export default function RoleSwitcher({ onOpenReportModal, currentRole, onRoleCha
                             key={reward.id}
                             className="p-2.5 rounded-xl border border-slate-200 bg-white flex flex-col justify-between"
                           >
-                            <h5 className="font-bold text-slate-800 text-[11px] line-clamp-1">{reward.name}</h5>
+                            <h5 className="font-bold text-slate-800 text-[11px] leading-tight">{reward.name}</h5>
                             <div className="flex items-center justify-between pt-1.5 mt-1 border-t border-slate-100">
                               <span className="text-[11px] font-extrabold text-tangerine">
                                 {reward.cost} Pts

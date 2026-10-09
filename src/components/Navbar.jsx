@@ -27,8 +27,8 @@ export default function Navbar({ onOpenDemoModal, onNavigateToDownload }) {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-        ? 'bg-[#F8FAFC]/90 backdrop-blur-md shadow-sm border-b border-slate-200/80 py-3'
-        : 'bg-[#F8FAFC]/75 backdrop-blur-sm py-4'
+        ? 'bg-[#F8FAFC]/95 backdrop-blur-md shadow-sm border-b border-slate-200/80 py-3'
+        : 'bg-[#F8FAFC]/90 backdrop-blur-md border-b border-slate-200/40 py-3.5 sm:py-4'
         }`}
     >
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
@@ -63,13 +63,13 @@ export default function Navbar({ onOpenDemoModal, onNavigateToDownload }) {
           </nav>
 
           {/* Action CTA Button */}
-          <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden sm:flex items-center gap-3 shrink-0">
             <button
               onClick={onNavigateToDownload || onOpenDemoModal}
-              className="relative inline-flex items-center gap-2 px-3 py-3 rounded-xl text-sm font-bold text-white bg-tangerine hover:bg-tangerine-600 shadow-md shadow-tangerine/25 hover:shadow-lg hover:shadow-tangerine/30 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+              className="relative inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl text-sm font-bold text-white bg-tangerine hover:bg-tangerine-600 shadow-md shadow-tangerine/25 hover:shadow-lg hover:shadow-tangerine/30 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer whitespace-nowrap shrink-0"
             >
-              <Download className="w-4 h-4 text-white" />
-              <span>Download PeduliMBG</span>
+              <Download className="w-4 h-4 text-white shrink-0" />
+              <span className="text-sm whitespace-nowrap">Download PeduliMBG</span>
             </button>
           </div>
 
@@ -111,10 +111,10 @@ export default function Navbar({ onOpenDemoModal, onNavigateToDownload }) {
                   onOpenDemoModal();
                 }
               }}
-              className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-bold text-white bg-tangerine hover:bg-tangerine-600 shadow-md shadow-tangerine/20 transition-all"
+              className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-bold text-white bg-tangerine hover:bg-tangerine-600 shadow-md shadow-tangerine/20 transition-all whitespace-nowrap"
             >
-              <Download className="w-4 h-4" />
-              <span>Download PeduliMBG APK</span>
+              <Download className="w-4 h-4 shrink-0" />
+              <span className="whitespace-nowrap">Download PeduliMBG APK</span>
             </button>
           </div>
         </div>

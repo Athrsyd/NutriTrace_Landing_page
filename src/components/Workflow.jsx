@@ -114,26 +114,28 @@ export default function Workflow({ onOpenReportModal }) {
               <button
                 key={step.stepNumber}
                 onClick={() => setActiveStep(idx)}
-                className={`text-left p-4 sm:p-5 rounded-2xl transition-all duration-200 border relative ${
+                className={`text-left p-4 sm:p-5 rounded-2xl transition-all duration-200 border relative flex flex-col justify-between ${
                   isCurrent
                     ? 'bg-white border-primary shadow-md shadow-primary/10'
                     : 'bg-white/60 border-slate-200 hover:bg-white'
                 }`}
               >
-                <div className="flex items-center justify-between mb-2">
-                  <span className={`text-[10px] sm:text-xs font-extrabold px-2 py-0.5 rounded-lg ${
-                    isCurrent ? step.activeBg : 'bg-slate-100 text-slate-600'
-                  }`}>
-                    Langkah {step.stepNumber}
-                  </span>
-                  <Icon className={`w-4 h-4 ${isCurrent ? 'text-primary' : 'text-slate-400'}`} />
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className={`text-[10px] sm:text-xs font-extrabold px-2 py-0.5 rounded-lg ${
+                      isCurrent ? step.activeBg : 'bg-slate-100 text-slate-600'
+                    }`}>
+                      Langkah {step.stepNumber}
+                    </span>
+                    <Icon className={`w-4 h-4 ${isCurrent ? 'text-primary' : 'text-slate-400'}`} />
+                  </div>
+                  <h4 className="font-extrabold text-xs sm:text-sm text-slate-800 leading-snug">
+                    {step.title}
+                  </h4>
+                  <p className="text-[11px] text-slate-500 mt-1 leading-relaxed">
+                    {step.shortDesc}
+                  </p>
                 </div>
-                <h4 className="font-extrabold text-xs sm:text-sm text-slate-800 line-clamp-1">
-                  {step.title}
-                </h4>
-                <p className="text-[11px] text-slate-500 line-clamp-2 mt-0.5">
-                  {step.shortDesc}
-                </p>
               </button>
             );
           })}
@@ -174,7 +176,7 @@ export default function Workflow({ onOpenReportModal }) {
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
                           {metric.label}
                         </span>
-                        <span className="text-xs sm:text-sm font-extrabold text-slate-800 mt-0.5 block truncate">
+                        <span className="text-xs sm:text-sm font-extrabold text-slate-800 mt-0.5 block leading-tight break-words">
                           {metric.value}
                         </span>
                       </div>

@@ -33,6 +33,7 @@
     background-color: #F8FAFC;
     color: #1E293B;
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
 
   body {

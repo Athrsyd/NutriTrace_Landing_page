@@ -42,8 +42,8 @@ export default function SdgAlignment() {
       ],
       impactMetrics: [
         { value: "100%", label: "Makanan Aman", note: "Selalu Diperiksa Saat Tiba" },
-        { value: "Aman", label: "Kondisi Higienis", note: "Layak & Siap Santap" },
-        { value: "Cepat", label: "Porsi Lebih Disalurkan", note: "Tepat Sasaran" }
+        { value: "Aman", label: "Higienis", note: "Layak & Siap Santap" },
+        { value: "Cepat", label: "Porsi Disalurkan", note: "Tepat Sasaran" }
       ]
     },
     {
@@ -70,7 +70,7 @@ export default function SdgAlignment() {
         }
       ],
       impactMetrics: [
-        { value: "85%", label: "Sisa Makanan Berkurang", note: "Piring Siswa Lebih Bersih" },
+        { value: "85%", label: "Sisa Berkurang", note: "Piring Siswa Lebih Bersih" },
         { value: "Tinggi", label: "Semangat Siswa", note: "Bangga Habiskan Makanan" },
         { value: "Rutin", label: "Evaluasi Menu", note: "Rasa Makin Disukai" }
       ]
@@ -99,9 +99,9 @@ export default function SdgAlignment() {
         }
       ],
       impactMetrics: [
-        { value: "0 kg", label: "Sampah Membusuk", note: "Langsung Diolah Bermanfaat" },
-        { value: "Nyata", label: "Pengurangan Bau", note: "Udara Sekolah Tetap Segar" },
-        { value: "Subur", label: "Kebun Hijau Sekolah", note: "Dipupuk dari Kompos Mandiri" }
+        { value: "0 kg", label: "Sampah Olahan", note: "Langsung Diolah Bermanfaat" },
+        { value: "Nyata", label: "Udara Bersih", note: "Pengurangan Bau Busuk" },
+        { value: "Subur", label: "Kebun Hijau", note: "Dipupuk dari Kompos Mandiri" }
       ]
     }
   ];
@@ -153,10 +153,10 @@ export default function SdgAlignment() {
                   />
 
                   <div className="min-w-0 flex-1">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block truncate">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">
                       {item.badgeText}
                     </span>
-                    <h4 className="font-extrabold text-slate-800 text-sm truncate mt-0.5">
+                    <h4 className="font-extrabold text-slate-800 text-sm mt-0.5 leading-snug">
                       {item.title}
                     </h4>
                     <span className="text-[11px] font-bold text-primary flex items-center gap-1 mt-0.5">
@@ -203,11 +203,11 @@ export default function SdgAlignment() {
                 {/* Impact Metrics Chips */}
                 <div className="grid grid-cols-3 gap-2 sm:gap-3 p-2.5 rounded-xl bg-white border border-slate-200/80 shrink-0">
                   {activeSdg.impactMetrics.map((metric, i) => (
-                    <div key={i} className="text-center px-2">
-                      <div className="text-sm sm:text-base font-black text-slate-800">
+                    <div key={i} className="text-center px-1 sm:px-2 flex flex-col justify-center">
+                      <div className="text-sm sm:text-base font-black text-slate-800 leading-tight">
                         {metric.value}
                       </div>
-                      <div className="text-[10px] font-bold text-slate-500 truncate">
+                      <div className="text-[10px] sm:text-xs font-bold text-slate-500 leading-tight mt-0.5 break-words">
                         {metric.label}
                       </div>
                     </div>
