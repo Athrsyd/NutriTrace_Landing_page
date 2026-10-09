@@ -65,7 +65,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#FFFFF0] text-slate-800 font-sans selection:bg-primary/20 selection:text-primary-800">
+    <div className="min-h-screen bg-[#F8FAFC] text-[#1E293B] font-sans selection:bg-primary/20 selection:text-primary-800">
       
       {/* Sticky Top Navigation */}
       <Navbar 

@@ -23,9 +23,9 @@ export default function AppOverview() {
   const appPurposes = [
     {
       id: 1,
-      title: "Zero Makanan Basi & Keracunan",
-      desc: "Menjamin mutu dan higienitas makanan MBG sebelum disantap siswa lewat sensor suhu digital & inspeksi organoleptik ketat.",
-      badge: "Keamanan Pangan",
+      title: "Makanan Selalu Segar & Aman",
+      desc: "Menjamin mutu dan kebersihan makanan sebelum disantap siswa dengan pemeriksaan yang cepat dan praktis.",
+      badge: "Keamanan Makanan",
       textColor: "text-amber-700",
       bgColor: "bg-amber-50",
       borderColor: "border-amber-200/70",
@@ -33,9 +33,9 @@ export default function AppOverview() {
     },
     {
       id: 2,
-      title: "Zero Sisa Piring (Food Waste)",
-      desc: "Membangun kesadaran piring bersih melalui gamifikasi interaktif, streak harian, dan reward apresiasi di sekolah.",
-      badge: "Perubahan Perilaku",
+      title: "Makan Habis Tanpa Sisa",
+      desc: "Mendorong siswa menghabiskan porsi makanannya lewat tantangan seru, poin harian, dan apresiasi yang menyenangkan.",
+      badge: "Kebiasaan Baik",
       textColor: "text-primary-800",
       bgColor: "bg-primary-50",
       borderColor: "border-primary-200/70",
@@ -43,9 +43,9 @@ export default function AppOverview() {
     },
     {
       id: 3,
-      title: "Zero Residu ke TPA Kota",
-      desc: "Mengalihkan 100% sisa organik yang tak terhindarkan menjadi pakan larva maggot BSF & kas nyata bagi sekolah.",
-      badge: "Ekonomi Sirkular",
+      title: "Lingkungan Bersih Bebas Sampah",
+      desc: "Mengolah sisa makanan yang tidak terhindarkan menjadi pupuk alami dan pakan ramah lingkungan untuk sekolah.",
+      badge: "Daur Ulang Bermanfaat",
       textColor: "text-emerald-700",
       bgColor: "bg-emerald-50",
       borderColor: "border-emerald-200/70",
@@ -57,70 +57,70 @@ export default function AppOverview() {
     {
       id: 'siswa',
       label: 'Siswa (Peserta Didik)',
-      badge: 'Konsumen & Duta Zero Waste',
-      roleDesc: 'Peserta didik yang menikmati makan bergizi gratis dan berpartisipasi aktif dalam pembiasaan piring bersih tanpa sisa.',
+      badge: 'Menikmati Makanan & Piring Bersih',
+      roleDesc: 'Peserta didik yang menikmati makan bergizi gratis dan berpartisipasi aktif membiasakan makan sampai habis.',
       icon: Users,
       color: 'bg-primary text-white',
       accentColor: 'text-primary',
       features: [
         {
-          title: 'Clean Plate Check-in',
-          desc: 'Scan foto piring kosong seusai makan siang sebagai bukti digital kebiasaan piring bersih.',
+          title: 'Foto Piring Bersih',
+          desc: 'Kirim foto piring yang sudah bersih sehabis makan sebagai bukti telah menghabiskan makanan.',
           icon: Camera,
           tag: 'Aksi Harian'
         },
         {
-          title: 'Daily Streak & Poin MBG',
-          desc: 'Dapatkan poin per hari dan bangun rekor streak konsumsi habis untuk membentuk kebiasaan disiplin.',
+          title: 'Poin & Rekor Harian',
+          desc: 'Kumpulkan poin setiap hari saat berhasil menghabiskan makanan untuk melatih kebiasaan disiplin.',
           icon: Flame,
-          tag: 'Gamifikasi'
+          tag: 'Semangat Positif'
         },
         {
-          title: 'Leaderboard Antarkelas',
-          desc: 'Pantau peringkat persentase piring bersih kelas secara real-time untuk memicu kompetisi positif.',
+          title: 'Peringkat Kelas Terbersih',
+          desc: 'Lihat kekompakan kelas dalam menghabiskan makanan dan jadilah kelas teladan di sekolah.',
           icon: Sparkles,
-          tag: 'Peringkat'
+          tag: 'Kompak & Bersih'
         },
         {
-          title: 'Katalog Reward Apresiasi',
-          desc: 'Tukarkan poin yang terkumpul dengan reward bermanfaat seperti susu ekstra, alat tulis, atau voucer.',
+          title: 'Tukar Hadiah Apresiasi',
+          desc: 'Tukarkan poin yang terkumpul dengan hadiah menarik seperti susu, alat tulis, atau camilan sehat.',
           icon: Award,
-          tag: 'Insentif'
+          tag: 'Hadiah Apresiasi'
         }
       ]
     },
     {
       id: 'pic',
-      label: 'PIC Sekolah (Satgas MBG)',
-      badge: 'Pengawas & Penanggung Jawab',
-      roleDesc: 'Guru, koordinator, dan tim satgas yang bertanggung jawab mengawasi kedatangan makanan, redistribusi surplus, dan pencatatan residu.',
+      label: 'Petugas Sekolah (Pengawas Makanan)',
+      badge: 'Pemeriksaan & Penyaluran',
+      roleDesc: 'Bapak/Ibu guru dan petugas sekolah yang memeriksa kedatangan makanan dan menyalurkan porsi berlebih.',
       icon: ShieldCheck,
       color: 'bg-slate-800 text-white',
       accentColor: 'text-slate-800',
       features: [
         {
-          title: 'QC Digital Kedatangan <2 Menit',
-          desc: 'Input hasil uji suhu digital probe (>60°C), verifikasi segel kemasan, dan uji organoleptik acak saat boks tiba.',
+          title: 'Pemeriksaan Cepat Makanan Tiba',
+          desc: 'Periksa kehangatan dan kebersihan kemasan makanan dengan mudah sesaat setelah boks tiba di sekolah.',
           icon: Thermometer,
           tag: 'Pemeriksaan'
         },
         {
-          title: 'Strict Surplus Hub (<1 Jam)',
-          desc: 'Deteksi porsi makanan berlebih yang masih utuh dan kelola redistribusi cepat sebelum batas aman basi.',
+          title: 'Penyaluran Porsi Berlebih',
+          desc: 'Catat porsi makanan yang berlebih agar dapat segera dibagikan kepada yang membutuhkan sebelum dingin.',
           icon: Clock,
-          tag: 'Penyelamatan Pangan'
+          tag: 'Bagi Bersama'
         },
         {
-          title: 'Pencatatan Residu Organik',
-          desc: 'Timbang dan catat residu sisa piring yang dialihkan ke unit biopon larva maggot BSF di sekolah.',
+          title: 'Pencatatan Daur Ulang Sisa',
+          desc: 'Catat sisa makanan yang berhasil diolah menjadi pupuk kompos atau pakan alami sekolah.',
           icon: Recycle,
-          tag: 'Sirkularitas'
+          tag: 'Ramah Lingkungan'
         },
         {
-          title: 'Dashboard Monitoring & Laporan',
-          desc: 'Pantau rekapitulasi mutu harian, evaluasi sisa makanan kelas, notifikasi anomali, dan cetak laporan resmi.',
+          title: 'Ringkasan & Laporan Sekolah',
+          desc: 'Pantau perkembangan kebiasaan makan siswa dan cetak laporan rapi untuk evaluasi berkala.',
           icon: BarChart3,
-          tag: 'Akuntabilitas'
+          tag: 'Laporan Praktis'
         }
       ]
     }
@@ -130,23 +130,23 @@ export default function AppOverview() {
 
   return (
     <section id="tentang" className="py-16 md:py-20 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* ================= SECTION HEADER ================= */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sage/60 border border-primary/20 text-xs font-bold text-primary-800 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-container border border-primary/20 text-xs font-bold text-primary-800 uppercase tracking-wider">
             <AppWindow className="w-3.5 h-3.5" />
-            <span>Tentang Aplikasi & Ekosistem</span>
+            <span>Tentang Aplikasi & Manfaat</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-800 tracking-tight">
-            Mengenal <span className="text-primary">NutriTrace</span>: Solusi Digital Pengawal MBG
+            Mengenal <span className="text-primary">PeduliMBG</span>: Solusi Pendamping Makanan Sekolah
           </h2>
 
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
-            NutriTrace adalah platform berbasis <strong>Android Native & Cloud</strong> yang 
-            mengintegrasikan Quality Control mutu makanan, eliminasi food waste melalui 
-            gamifikasi siswa, serta pencatatan residu pangan menjadi ekonomi sirkular sekolah.
+            PeduliMBG adalah aplikasi praktis sekolah untuk menjaga kualitas makanan, 
+            mengajak siswa menghabiskan piring tanpa sisa, serta memanfaatkan sisa makanan 
+            menjadi produk yang berguna bagi lingkungan.
           </p>
         </div>
 
@@ -156,7 +156,7 @@ export default function AppOverview() {
             <div>
               <span className="text-[11px] font-bold uppercase tracking-wider text-primary">Core Mission</span>
               <h3 className="text-xl sm:text-2xl font-extrabold text-slate-800">
-                Tiga Tujuan Pokok NutriTrace
+                Tiga Tujuan Pokok PeduliMBG
               </h3>
             </div>
             <div className="hidden sm:flex items-center gap-1.5 text-xs font-bold text-slate-500">
@@ -223,7 +223,7 @@ export default function AppOverview() {
                 Antarmuka Terintegrasi: Siswa & PIC Sekolah
               </h3>
               <p className="text-xs text-slate-500 mt-0.5 max-w-xl">
-                Aplikasi NutriTrace memiliki 2 alur pengguna utama yang disesuaikan dengan tanggung jawab masing-masing.
+                Aplikasi PeduliMBG memiliki 2 alur pengguna utama yang disesuaikan dengan tanggung jawab masing-masing.
               </p>
             </div>
 

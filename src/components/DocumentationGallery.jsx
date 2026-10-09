@@ -22,49 +22,49 @@ export default function DocumentationGallery() {
     {
       id: 1,
       category: 'qc',
-      title: 'Pemeriksaan Suhu & Segel Kedatangan',
+      title: 'Pemeriksaan Makanan Saat Tiba',
       location: 'Kantin Utama SMKN 26',
       time: '09:42 WIB',
-      badge: '100% Lolos QC',
+      badge: 'Aman & Bersih',
       badgeColor: 'bg-emerald-500 text-white',
       img: '/images/mbg_qc_arrival.jpg',
-      desc: 'Pengawasan suhu bento MBG (>68°C) menggunakan termometer probe digital serta inspeksi segel sebelum didistribusikan ke kelas.',
+      desc: 'Pemeriksaan kehangatan dan kebersihan kemasan makanan sebelum dibagikan secara teratur ke ruang kelas.',
       icon: ShieldCheck,
     },
     {
       id: 2,
       category: 'siswa',
-      title: 'Aksi Clean Plate Check-in Siswa',
+      title: 'Siswa Menghabiskan Makanan Tanpa Sisa',
       location: 'Ruang Kelas XII RPL 1',
       time: '12:15 WIB',
-      badge: 'Zero Food Waste',
+      badge: 'Piring Bersih',
       badgeColor: 'bg-primary text-white',
       img: '/images/mbg_clean_plate.jpg',
-      desc: 'Siswa SMK dengan antusias menghabiskan seluruh porsi menu MBG hingga piring bersih tanpa sisa residu.',
+      desc: 'Siswa dengan gembira menikmati dan menghabiskan seluruh makanan di piring tanpa ada yang terbuang.',
       icon: Flame,
     },
     {
       id: 3,
       category: 'maggot',
-      title: 'Stasiun Biokonversi Maggot BSF',
+      title: 'Pengolahan Sisa Makanan Ramah Lingkungan',
       location: 'Eco-Station SMKN 26',
       time: '13:00 WIB',
-      badge: 'Sirkular Organik',
-      badgeColor: 'bg-sage-dark text-slate-900',
+      badge: 'Daur Ulang Sisa',
+      badgeColor: 'bg-container text-slate-800',
       img: '/images/mbg_maggot_waste.jpg',
-      desc: 'Pemilahan sisa organik menjadi bahan pakan larva Black Soldier Fly (BSF) dan pengomposan mandiri sekolah.',
+      desc: 'Pemilahan sisa makanan yang tidak habis untuk diolah menjadi pupuk kompos dan pakan alami sekolah.',
       icon: Recycle,
     },
     {
       id: 4,
       category: 'koperasi',
-      title: 'Penukaran Reward Koperasi Sekolah',
+      title: 'Penukaran Hadiah Apresiasi Siswa',
       location: 'Koperasi Siswa Mandiri',
       time: '13:30 WIB',
-      badge: 'Ekonomi Sirkular',
+      badge: 'Hadiah Apresiasi',
       badgeColor: 'bg-tangerine text-white',
       img: '/images/mbg_koperasi_reward.jpg',
-      desc: 'Siswa menukarkan poin streak piring bersih dengan produk susu segar, buah apel, dan botol minum ramah lingkungan.',
+      desc: 'Siswa menukarkan poin piring bersih dengan hadiah bermanfaat seperti susu segar, buah, atau alat tulis.',
       icon: Store,
     },
   ];
@@ -75,21 +75,21 @@ export default function DocumentationGallery() {
 
   return (
     <section id="dokumentasi" className="py-10 lg:py-20 md:py-24 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Section Header with concise text */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div className="space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sage/60 border border-primary/20 text-xs font-bold text-primary-800 uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-container border border-primary/20 text-xs font-bold text-primary-800 uppercase tracking-wider">
               <Camera className="w-3.5 h-3.5 text-primary" />
-              <span>Dokumentasi Lapangan MBG</span>
+              <span>Dokumentasi Kegiatan Sekolah</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-800 tracking-tight">
               Galeri Aksi Nyata di Sekolah
             </h2>
             <p className="text-sm sm:text-base text-slate-600 max-w-xl">
-              Bukti visual implementasi terpadu: dari pengujian mutu katering, piring bersih siswa, 
-              hingga biokonversi maggot dan belanja reward koperasi.
+              Momen nyata di sekolah: dari pemeriksaan makanan saat tiba, kebiasaan makan habis di kelas, 
+              hingga pengolahan sisa makanan secara ramah lingkungan.
             </p>
           </div>
 

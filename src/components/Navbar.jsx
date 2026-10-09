@@ -27,19 +27,19 @@ export default function Navbar({ onOpenDemoModal, onNavigateToDownload }) {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-        ? 'bg-[#FFFFF0]/90 backdrop-blur-md shadow-sm border-b border-sage/50 py-3'
-        : 'bg-[#FFFFF0]/70 backdrop-blur-sm py-4'
+        ? 'bg-[#F8FAFC]/90 backdrop-blur-md shadow-sm border-b border-slate-200/80 py-3'
+        : 'bg-[#F8FAFC]/75 backdrop-blur-sm py-4'
         }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
-            <img src="./logo.png" alt="" className='w-10 h-10 rounded-xl '/>
+            <img src="./logo.png" alt="" className='w-10 h-10 rounded-xl ' />
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5">
                 <span className="font-extrabold text-xl tracking-tight text-slate-800">
-                  Nutri<span className="text-primary">Trace</span>
+                  Peduli<span className="text-primary">MBG</span>
                 </span>
 
               </div>
@@ -66,10 +66,10 @@ export default function Navbar({ onOpenDemoModal, onNavigateToDownload }) {
           <div className="hidden sm:flex items-center gap-3">
             <button
               onClick={onNavigateToDownload || onOpenDemoModal}
-              className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold text-white bg-tangerine hover:bg-tangerine-600 shadow-md shadow-tangerine/25 hover:shadow-lg hover:shadow-tangerine/30 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+              className="relative inline-flex items-center gap-2 px-3 py-3 rounded-xl text-sm font-bold text-white bg-tangerine hover:bg-tangerine-600 shadow-md shadow-tangerine/25 hover:shadow-lg hover:shadow-tangerine/30 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
             >
               <Download className="w-4 h-4 text-white" />
-              <span>Download NutriTrace</span>
+              <span>Download PeduliMBG</span>
             </button>
           </div>
 
@@ -88,7 +88,7 @@ export default function Navbar({ onOpenDemoModal, onNavigateToDownload }) {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-b border-sage/60 bg-[#FFFFF0]/95 backdrop-blur-xl px-4 pt-3 pb-6 space-y-3 transition-all">
+        <div className="md:hidden border-b border-slate-200/80 bg-[#F8FAFC]/95 backdrop-blur-xl px-4 pt-3 pb-6 space-y-3 transition-all">
           <div className="flex flex-col space-y-1">
             {navLinks.map((link) => (
               <a
@@ -114,7 +114,7 @@ export default function Navbar({ onOpenDemoModal, onNavigateToDownload }) {
               className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-bold text-white bg-tangerine hover:bg-tangerine-600 shadow-md shadow-tangerine/20 transition-all"
             >
               <Download className="w-4 h-4" />
-              <span>Download NutriTrace APK</span>
+              <span>Download PeduliMBG APK</span>
             </button>
           </div>
         </div>

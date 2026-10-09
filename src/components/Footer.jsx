@@ -8,19 +8,19 @@ const sdgList = [
   {
     id: '02',
     title: 'SDG 2: Tanpa Kelaparan',
-    description: 'Memastikan mutu gizi MBG terserap optimal tanpa basi.',
+    description: 'Memastikan gizi makanan terserap baik dan aman bagi siswa.',
     logo: sdg2Logo,
   },
   {
     id: '12',
     title: 'SDG 12: Konsumsi Bertanggung Jawab',
-    description: 'Clean Plate Check-in menghentikan limbah sisa makanan.',
+    description: 'Membiasakan piring bersih untuk mencegah makanan terbuang.',
     logo: sdg12Logo,
   },
   {
     id: '13',
-    title: 'SDG 13: Penanganan Perubahan Iklim',
-    description: 'Mereduksi gas metana lewat biokonversi pakan larva BSF.',
+    title: 'SDG 13: Peduli Lingkungan & Iklim',
+    description: 'Mengolah sisa makanan menjadi pupuk dan pakan ramah lingkungan.',
     logo: sdg13Logo,
   },
 ];
@@ -32,7 +32,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
 
         {/* Top Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
@@ -44,20 +44,19 @@ export default function Footer() {
               <div className="flex flex-col">
                 <div className="flex items-center gap-1.5">
                   <span className="font-extrabold text-xl tracking-tight text-white">
-                    Nutri<span className="text-primary">Trace</span>
+                    Peduli<span className="text-primary">MBG</span>
                   </span>
 
                 </div>
                 <span className="text-[11px] font-medium text-slate-500 hidden sm:inline-block">
-                  Smart QC MBG & Zero Waste App
+                  Aplikasi Pengawal Makanan & Sekolah Bebas Sampah
                 </span>
               </div>
             </a>
 
             <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
-              Platform pendamping Program Makan Bergizi Gratis (MBG) berbasis Android Native
-              untuk memastikan kualitas makanan harian, mengeliminasi food waste, dan menggerakkan
-              ekonomi sirkular di lingkungan sekolah.
+              Aplikasi pendamping sekolah untuk memastikan kualitas makanan harian siswa, 
+              mencegah makanan terbuang, dan mengolah sisa makanan menjadi bermanfaat bagi lingkungan.
             </p>
 
             <div className="flex items-center gap-2 pt-2 text-xs text-slate-400">
@@ -137,7 +136,7 @@ export default function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>
             <p>
-              © 2026 <strong className="text-slate-300 font-semibold">NutriTrace</strong>. Dirancang & Dikembangkan oleh{' '}
+              © 2026 <strong className="text-slate-300 font-semibold">PeduliMBG</strong>. Dirancang & Dikembangkan oleh{' '}
               <strong className="text-slate-300 font-semibold">Tim eSDoGer&apos;s</strong> (SMKN 26 Jakarta).
             </p>
             <p className="mt-0.5 text-[11px]">

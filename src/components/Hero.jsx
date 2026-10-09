@@ -11,10 +11,10 @@ export default function Hero({ onExploreClick, onCalculatorClick }) {
   return (
     <section className="relative pt-18 pb-4 lg:pt-20 lg:pb-6 min-h-[calc(100vh-4rem)] flex items-center overflow-hidden">
       {/* Decorative ambient gradients (subtle glow) */}
-      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-br from-sage/15 via-primary/5 to-transparent blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-full max-w-6xl h-96 bg-gradient-to-br from-sage/15 via-primary/5 to-transparent blur-3xl pointer-events-none -z-10" />
       <div className="absolute top-40 right-10 w-52 h-52 rounded-full bg-tangerine/5 blur-3xl pointer-events-none -z-10" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
 
           {/* Left Column: Headline & Value Prop */}
@@ -22,7 +22,7 @@ export default function Hero({ onExploreClick, onCalculatorClick }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-7 flex flex-col gap-4 text-center lg:text-left"
+            className="lg:col-span-7 flex flex-col gap-4 text-center lg:text-left ml-12"
           >
             {/* Tagline Badge */}
             {/* <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/80 backdrop-blur-md border border-primary/30 shadow-xs">
@@ -34,16 +34,16 @@ export default function Hero({ onExploreClick, onCalculatorClick }) {
 
             {/* Headline */}
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[44px] font-black tracking-tight text-slate-800 leading-10">
-              Kawal Mutu MBG, Hentikan Food Waste Lewat{' '} <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-600 underline decoration-sage decoration-wavy decoration-2">
-                Clean Plate Check-in
+              Kawal Mutu Makanan, Biasakan Santap Habis Lewat{' '} <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-600 underline decoration-container decoration-wavy decoration-2">
+                Gerakan Piring Bersih
               </span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-              Satu platform untuk kendali mutu katering, gamifikasi piring bersih siswa,
-              dan konversi residu organik menjadi pakan maggot bernilai kas koperasi sekolah.
+              Aplikasi pendamping sekolah untuk memastikan makanan bergizi tetap hangat dan higienis,
+              mengajak siswa makan lahap tanpa sisa, serta mengolah sisa makanan menjadi bermanfaat.
             </p>
 
             {/* Action Buttons */}
@@ -118,7 +118,7 @@ export default function Hero({ onExploreClick, onCalculatorClick }) {
                   */}
                   <img
                     src="/images/app_mockup.png"
-                    alt="NutriTrace Mobile App Screen"
+                    alt="PeduliMBG Mobile App Screen"
                     className="w-full h-full object-cover object-top select-none pointer-events-none"
                     onError={(e) => {
                       e.currentTarget.src = '/images/mbg_qc_arrival.jpg';
@@ -143,8 +143,8 @@ export default function Hero({ onExploreClick, onCalculatorClick }) {
                   <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </div>
                 <div>
-                  <span className="text-[9px] font-bold text-primary block leading-tight">QC KATERING</span>
-                  <span className="text-[11px] sm:text-xs font-extrabold text-slate-800">&lt; 2 Menit Akurat</span>
+                  <span className="text-[9px] font-bold text-primary block leading-tight">PEMERIKSAAN MAKANAN</span>
+                  <span className="text-[11px] sm:text-xs font-extrabold text-slate-800">Cepat & Higienis</span>
                 </div>
               </motion.div>
 
@@ -158,8 +158,8 @@ export default function Hero({ onExploreClick, onCalculatorClick }) {
                   <Flame className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-white" />
                 </div>
                 <div>
-                  <span className="text-[9px] font-bold text-slate-400 block leading-tight">GAMIFIKASI</span>
-                  <span className="text-[11px] sm:text-xs font-extrabold text-slate-800">Clean Plate Reward</span>
+                  <span className="text-[9px] font-bold text-slate-400 block leading-tight">KEBIASAAN BAIK</span>
+                  <span className="text-[11px] sm:text-xs font-extrabold text-slate-800">Piring Bersih & Berhadiah</span>
                 </div>
               </motion.div>
 

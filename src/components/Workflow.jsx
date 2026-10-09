@@ -20,68 +20,68 @@ export default function Workflow({ onOpenReportModal }) {
   const steps = [
     {
       stepNumber: "01",
-      title: "QC Kedatangan Katering",
-      tagline: "Verifikasi Mutu < 2 Menit",
-      shortDesc: "Uji suhu bento (>60°C) & cek segel fisik saat boks tiba.",
-      detailedDesc: "Petugas Satgas MBG memeriksa suhu makanan dengan termometer digital probe, memastikan integritas segel kemasan, serta mencocokkan kelengkapan porsi kelas.",
+      title: "Pemeriksaan Makanan Tiba",
+      tagline: "Memastikan Makanan Bersih & Hangat",
+      shortDesc: "Pemeriksaan kondisi makanan saat baru tiba agar tetap hangat, bersih, dan aman.",
+      detailedDesc: "Petugas sekolah memeriksa kebersihan kemasan dan memastikan makanan dalam kondisi hangat serta layak dikonsumsi sebelum disajikan kepada siswa.",
       img: "/images/mbg_qc_arrival.jpg",
-      imgCaption: "Pemeriksaan Suhu & Segel Bento MBG oleh Satgas",
+      imgCaption: "Pemeriksaan kebersihan dan kelayakan makanan saat tiba di sekolah",
       icon: ClipboardCheck,
       metrics: [
-        { label: "Waktu Input", value: "< 2 Menit" },
-        { label: "Suhu Aman", value: "≥ 60.0°C" },
-        { label: "Verifikasi", value: "Segel & Alergen" },
+        { label: "Kondisi", value: "Hangat & Bersih" },
+        { label: "Kemasan", value: "Rapi & Tersegel" },
+        { label: "Hasil", value: "Aman Dikonsumsi" },
       ],
       color: "border-primary text-primary",
       activeBg: "bg-primary text-white",
     },
     {
       stepNumber: "02",
-      title: "Distribusi & Surplus Hub",
-      tagline: "Strict Surplus Hub < 1 Jam",
-      shortDesc: "Pengamanan porsi lebih tersegel untuk staf dan siswa.",
-      detailedDesc: "Porsi utuh tersegel yang tersisa langsung tercatat di hub. Sistem mengaktifkan countdown timer 1 jam untuk redistribusi higienis sebelum kualitas makanan berkurang.",
+      title: "Pembagian Makanan ke Siswa",
+      tagline: "Tertib, Merata, & Tepat Sasaran",
+      shortDesc: "Makanan dibagikan ke setiap kelas, dan porsi berlebih disalurkan agar tidak mubazir.",
+      detailedDesc: "Makanan dibagikan secara tertib ke setiap kelas. Jika ada porsi lebih yang masih bersih dan utuh, langsung disalurkan kepada warga sekolah yang membutuhkan agar tidak ada makanan yang terbuang.",
       img: "/images/mbg_qc_arrival.jpg",
-      imgCaption: "Porsi Utuh Tersegel Siap Diredistribusikan (< 1 Jam)",
+      imgCaption: "Penyaluran makanan secara tertib dan higienis ke setiap kelas",
       icon: Clock,
       metrics: [
-        { label: "Batas Waktu", value: "< 1 Jam" },
-        { label: "Kondisi", value: "100% Tersegel" },
-        { label: "Penerima", value: "Staf & Siswa" },
+        { label: "Pembagian", value: "Merata ke Kelas" },
+        { label: "Porsi Berlebih", value: "Segera Disalurkan" },
+        { label: "Tujuan", value: "Tidak Ada yang Terbuang" },
       ],
       color: "border-tangerine text-tangerine",
       activeBg: "bg-tangerine text-white",
     },
     {
       stepNumber: "03",
-      title: "Clean Plate Check-in",
-      tagline: "Gamifikasi Piring Bersih Siswa",
-      shortDesc: "Foto piring habis untuk raih poin harian & streak.",
-      detailedDesc: "Siswa menikmati makanan bergizi dan memotret piring yang telah habis. Sistem memverifikasi citra piring, menambah +50 poin, dan menaikkan ranking kelas.",
+      title: "Makan Bersama & Habiskan Piring",
+      tagline: "Membiasakan Makan Tanpa Sisa",
+      shortDesc: "Siswa makan bersama dan diajak menghabiskan porsinya sampai bersih.",
+      detailedDesc: "Siswa menikmati makanan bergizi bersama teman sekelas dan diajak untuk menghabiskan seluruh makanan di piring. Kebiasaan baik ini diapresiasi agar anak-anak terbiasa menghargai makanan.",
       img: "/images/mbg_clean_plate.jpg",
-      imgCaption: "Siswa SMKN 26 Menghabiskan Menu MBG Tanpa Sisa",
+      imgCaption: "Siswa menikmati makanan bergizi dan menghabiskan porsinya tanpa sisa",
       icon: UtensilsCrossed,
       metrics: [
-        { label: "Hadiah Harian", value: "+50 Poin" },
-        { label: "Gamifikasi", value: "Streak & Badges" },
-        { label: "Kompetisi", value: "Leaderboard Kelas" },
+        { label: "Kebiasaan", value: "Piring Bersih" },
+        { label: "Apresiasi", value: "Poin Semangat Positif" },
+        { label: "Manfaat", value: "Gizi Terserap Sempurna" },
       ],
       color: "border-emerald-600 text-emerald-600",
       activeBg: "bg-emerald-600 text-white",
     },
     {
       stepNumber: "04",
-      title: "Sirkular Maggot & Kompos",
-      tagline: "Biokonversi & Kas Koperasi Sekolah",
-      shortDesc: "Residu organik diolah jadi pakan larva BSF & pupuk.",
-      detailedDesc: "Sisa organik dialirkan ke mitra peternak Black Soldier Fly (BSF) dan pengomposan. Hasil penjualan biomassa menjadi kas pendana katalog reward koperasi sekolah.",
+      title: "Pengolahan Sisa Makanan",
+      tagline: "Memanfaatkan Sisa Jadi Bernilai",
+      shortDesc: "Sisa makanan dipilah untuk diolah kembali menjadi pupuk dan pakan ternak.",
+      detailedDesc: "Sisa makanan yang tidak habis dipilah secara teratur dan diolah kembali secara ramah lingkungan menjadi pupuk kompos atau pakan ternak, sehingga lingkungan sekolah tetap bersih dan bebas sampah.",
       img: "/images/mbg_maggot_waste.jpg",
-      imgCaption: "Stasiun Biokonversi Maggot BSF di Sekolah",
+      imgCaption: "Pengolahan sisa makanan secara ramah lingkungan di sekolah",
       icon: Recycle,
       metrics: [
-        { label: "Limbah ke TPA", value: "0 kg (Nir-Sampah)" },
-        { label: "Hasil Konversi", value: "Maggot BSF & Kompos" },
-        { label: "Ekonomi", value: "Kas Koperasi" },
+        { label: "Sampah Terbuang", value: "Berkurang Drastis" },
+        { label: "Pemanfaatan", value: "Pupuk Kompos & Pakan" },
+        { label: "Hasil", value: "Sekolah Bersih & Asri" },
       ],
       color: "border-primary-700 text-primary-700",
       activeBg: "bg-primary-700 text-white",
@@ -90,18 +90,18 @@ export default function Workflow({ onOpenReportModal }) {
 
   return (
     <section id="alur" className="py-20 md:py-24 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Section Header - Concise */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sage/60 border border-primary/20 text-xs font-bold text-primary-800 uppercase tracking-wider">
-            <span>Standar Operasional MBG</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-container border border-primary/20 text-xs font-bold text-primary-800 uppercase tracking-wider">
+            <span>Alur Praktis Sekolah</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-800 tracking-tight">
-            Alur Rantai Pasok Terpadu (4 Langkah)
+            Alur Pengelolaan Makanan (4 Langkah Mudah)
           </h2>
           <p className="text-sm sm:text-base text-slate-600">
-            Panduan sistematis dari kedatangan makanan hingga pengelolaan residu bernilai ekonomi.
+            Panduan sederhana mulai dari makanan tiba, dibagikan ke siswa, hingga penanganan sisa makanan secara bermanfaat.
           </p>
         </div>
 

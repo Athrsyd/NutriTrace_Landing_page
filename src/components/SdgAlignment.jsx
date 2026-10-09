@@ -20,88 +20,88 @@ export default function SdgAlignment() {
     {
       id: 2,
       logo: sdg2Logo,
-      badgeText: "SDG 2 • Zero Hunger",
-      title: "Tanpa Kelaparan & Perbaikan Gizi",
+      badgeText: "SDG 2 • Tanpa Kelaparan",
+      title: "Pencegahan Kelaparan & Gizi Sehat",
       accent: "text-amber-600",
       activeBg: "bg-amber-500/10 border-amber-500/40",
-      unTarget: "Target 2.1 & 2.2: Akses pangan bergizi merata & penghapusan malnutrisi anak sekolah.",
-      problem: "Makanan MBG yang basi karena penurunan suhu (<60°C) atau terlambat tiba berisiko memicu kontaminasi bakteri, penyakit pencernaan, dan hilangnya penyerapan nutrisi harian siswa.",
+      unTarget: "Target 2.1 & 2.2: Memastikan setiap anak mendapatkan makanan bergizi, sehat, dan cukup.",
+      problem: "Makanan yang tidak diperiksa kondisinya berisiko basi atau dingin saat dinikmati siswa, sehingga manfaat gizinya berkurang dan rentan mengganggu kesehatan.",
       solutionSteps: [
         {
-          name: "QC Suhu Digital Probe (>60°C)",
-          desc: "Validasi suhu boks tiba dalam <2 menit guna memutus perkembangbiakan bakteri berbahaya."
+          name: "Pemeriksaan Makanan Hangat & Segar",
+          desc: "Memastikan makanan dalam kondisi hangat, bersih, dan segar saat tiba sebelum dinikmati siswa."
         },
         {
-          name: "Jaminan Absorpsi Gizi MBG",
-          desc: "Menjamin mutu kalori dan protein terserap optimal ke tubuh siswa tanpa risiko kontaminasi."
+          name: "Manfaat Gizi Optimal",
+          desc: "Menjamin nutrisi makanan terserap optimal untuk kesehatan tubuh dan semangat belajar siswa."
         },
         {
-          name: "Strict Surplus Hub <1 Jam",
-          desc: "Redistribusi tertib porsi berlebih yang masih layak konsumsi sebelum memasuki masa kedaluwarsa."
+          name: "Penyaluran Makanan Berlebih",
+          desc: "Membagikan makanan porsi berlebih yang masih bersih dan utuh kepada yang membutuhkan agar tidak mubazir."
         }
       ],
       impactMetrics: [
-        { value: "0 Kasus", label: "Keracunan Pangan", note: "Standar Keamanan Ketat" },
-        { value: "100%", label: "QC Terverifikasi", note: "Boks Makanan Tervalidasi" },
-        { value: "<1 Jam", label: "Redistribusi Surplus", note: "Cepat & Tepat Sasaran" }
+        { value: "100%", label: "Makanan Aman", note: "Selalu Diperiksa Saat Tiba" },
+        { value: "Aman", label: "Kondisi Higienis", note: "Layak & Siap Santap" },
+        { value: "Cepat", label: "Porsi Lebih Disalurkan", note: "Tepat Sasaran" }
       ]
     },
     {
       id: 12,
       logo: sdg12Logo,
-      badgeText: "SDG 12 • Responsible Consumption",
-      title: "Konsumsi & Produksi Bertanggung Jawab",
+      badgeText: "SDG 12 • Konsumsi Bertanggung Jawab",
+      title: "Konsumsi Bijak & Menghargai Makanan",
       accent: "text-orange-600",
       activeBg: "bg-orange-500/10 border-orange-500/40",
-      unTarget: "Target 12.3: Memangkas separuh food waste per kapita global pada 2030.",
-      problem: "Banyak siswa menyisakan sayur atau lauk di tempat sampah kelas. Tanpa sistem pemantauan, anggaran subsidi MBG terbuang percuma dan menambah beban timbulan sampah kota.",
+      unTarget: "Target 12.3: Mengurangi kebiasaan membuang makanan dan membiasakan pola makan hemat.",
+      problem: "Sayur dan lauk sering bersisa di piring siswa dan terbuang percuma ke tempat sampah jika anak-anak belum terbiasa menghabiskan makanannya.",
       solutionSteps: [
         {
-          name: "Gamifikasi Clean Plate Check-in",
-          desc: "Membangun kebiasaan piring bersih melalui scan foto harian berhadiah streak dan reward koperasi."
+          name: "Gerakan Piring Bersih",
+          desc: "Membiasakan siswa menghabiskan porsi makannya lewat foto piring bersih dan apresiasi yang menyenangkan."
         },
         {
-          name: "Food Waste Intelligence ke Katering",
-          desc: "Data analitik menu bersisa dilaporkan ke dapur mitra untuk mengevaluasi bumbu, rasa, dan porsi."
+          name: "Masukan Menu ke Katering",
+          desc: "Catatan menu yang kurang disukai disampaikan ke pihak katering agar bumbu dan variasinya makin digemari siswa."
         },
         {
-          name: "Efisiensi Belanja MBG Negara",
-          desc: "Mencegah alokasi dana konsumsi anak bangsa terbuang sia-sia menjadi residu sampah."
+          name: "Bantuan Tepat Guna",
+          desc: "Memastikan seluruh bantuan makanan sekolah benar-benar dimakan habis dan bermanfaat bagi siswa."
         }
       ],
       impactMetrics: [
-        { value: "85%", label: "Reduksi Food Waste", note: "Sisa Makanan di Piring Berkurang" },
-        { value: "96.4%", label: "Piring Bersih", note: "Partisipasi Check-in Siswa" },
-        { value: "Harian", label: "Feedback Menu", note: "Evaluasi Cita Rasa Dapur" }
+        { value: "85%", label: "Sisa Makanan Berkurang", note: "Piring Siswa Lebih Bersih" },
+        { value: "Tinggi", label: "Semangat Siswa", note: "Bangga Habiskan Makanan" },
+        { value: "Rutin", label: "Evaluasi Menu", note: "Rasa Makin Disukai" }
       ]
     },
     {
       id: 13,
       logo: sdg13Logo,
-      badgeText: "SDG 13 • Climate Action",
-      title: "Penanganan Perubahan Iklim",
+      badgeText: "SDG 13 • Peduli Lingkungan & Iklim",
+      title: "Menjaga Kebersihan & Kelestarian Bumi",
       accent: "text-emerald-700",
       activeBg: "bg-emerald-500/10 border-emerald-500/40",
-      unTarget: "Target 13.3: Meningkatkan pendidikan & kapasitas mitigasi perubahan iklim di sekolah.",
-      problem: "Sampah makanan yang ditimbun di TPA membusuk anaerobik dan melepaskan Gas Metana (CH₄), yang 28x lebih berbahaya dibandingkan CO₂ dalam memerangkap panas atmosfer bumi.",
+      unTarget: "Target 13.3: Mengajarkan kepedulian lingkungan dan kebiasaan memilah sampah sejak dini.",
+      problem: "Sampah sisa makanan yang menumpuk di tempat pembuangan bisa membusuk, menimbulkan bau menyengat, dan mencemari udara sekitar.",
       solutionSteps: [
         {
-          name: "100% Biokonversi Maggot BSF",
-          desc: "Residu piring dialihkan ke biopon larva BSF dalam <24 jam sebelum membusuk menghasilkan metana."
+          name: "Daur Ulang Ramah Lingkungan",
+          desc: "Sisa makanan dipilah sebelum membusuk untuk diolah kembali menjadi pupuk kompos dan pakan alami."
         },
         {
-          name: "Pupuk Organik Kasgot",
-          desc: "Hasil sampingan larva diolah menjadi pupuk kasgot untuk penghijauan sekolah tanpa bahan kimia."
+          name: "Pupuk Kompos Alami",
+          desc: "Hasil olahan sisa makanan digunakan untuk menyuburkan tanaman dan kebun hijau di lingkungan sekolah."
         },
         {
-          name: "Nol Residu MBG ke TPA Kota",
-          desc: "Menghapuskan beban ritase truk sampah dan mengeliminasi jejak emisi karbon sekolah."
+          name: "Sekolah Bersih & Segar",
+          desc: "Mengurangi sampah yang dibuang ke luar sekolah sehingga lingkungan sekolah tetap bersih, sejuk, dan asri."
         }
       ],
       impactMetrics: [
-        { value: "0 kg", label: "Organik ke TPA", note: "100% Didaur Ulang di Sekolah" },
-        { value: "~420 kg", label: "Reduksi Emisi Metana", note: "Setara CO₂e / Bulan / Sekolah" },
-        { value: "120 kg", label: "Pupuk Kasgot/Bulan", note: "Menyuburkan Kebun Sekolah" }
+        { value: "0 kg", label: "Sampah Membusuk", note: "Langsung Diolah Bermanfaat" },
+        { value: "Nyata", label: "Pengurangan Bau", note: "Udara Sekolah Tetap Segar" },
+        { value: "Subur", label: "Kebun Hijau Sekolah", note: "Dipupuk dari Kompos Mandiri" }
       ]
     }
   ];
@@ -110,21 +110,21 @@ export default function SdgAlignment() {
 
   return (
     <section id="sdgs" className="py-16 md:py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sage/60 border border-primary/20 text-xs font-bold text-primary-800 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-container border border-primary/20 text-xs font-bold text-primary-800 uppercase tracking-wider">
             <Globe2 className="w-3.5 h-3.5" />
-            <span>Agenda PBB 2030 Terpadu</span>
+            <span>Dampak Positif Lingkungan & Sosial</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-800 tracking-tight">
-            Bagaimana NutriTrace Menyelesaikan SDGs?
+            Bagaimana PeduliMBG Membantu Lingkungan & Masa Depan?
           </h2>
 
           <p className="text-sm sm:text-base text-slate-600">
-            Setiap fitur dirancang spesifik untuk menjawab 3 pilar Tujuan Pembangunan Berkelanjutan (SDGs).
+            Membiasakan hidup sehat, menghargai makanan, dan menjaga kebersihan lingkungan sekolah.
           </p>
         </div>
 
@@ -234,11 +234,11 @@ export default function SdgAlignment() {
                   </div>
                 </div>
 
-                {/* Right: Solusi NutriTrace */}
+                {/* Right: Solusi PeduliMBG */}
                 <div className="md:col-span-7 p-5 rounded-2xl bg-emerald-50/40 border border-emerald-200/50 space-y-3">
                   <div className="flex items-center gap-1.5 text-emerald-800 text-xs font-bold uppercase tracking-wider">
                     <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-600" />
-                    <span>Langkah Solusi NutriTrace</span>
+                    <span>Langkah Solusi PeduliMBG</span>
                   </div>
 
                   <div className="space-y-2.5">

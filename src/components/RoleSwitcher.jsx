@@ -49,7 +49,7 @@ export default function RoleSwitcher({ onOpenReportModal, currentRole, onRoleCha
           particleCount: 70,
           spread: 60,
           origin: { y: 0.65 },
-          colors: ['#8AA624', '#FEA405', '#DBE4C9']
+          colors: ['#0D9488', '#F59E0B', '#14B8A6']
         });
       } catch (e) {
         console.log('Confetti triggered');
@@ -85,7 +85,7 @@ export default function RoleSwitcher({ onOpenReportModal, currentRole, onRoleCha
 
   return (
     <section id="peran" className="py-20 md:py-24 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Header - Concise */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-10">
@@ -122,7 +122,7 @@ export default function RoleSwitcher({ onOpenReportModal, currentRole, onRoleCha
               }`}
             >
               <ShieldCheck className="w-4 h-4" />
-              <span>Mode PIC Sekolah (QC & Surplus)</span>
+              <span>Mode Petugas Sekolah</span>
             </button>
           </div>
         </div>
@@ -171,7 +171,7 @@ export default function RoleSwitcher({ onOpenReportModal, currentRole, onRoleCha
                   </div>
 
                   {/* Clean Plate Check-in Simulator with Photo HUD */}
-                  <div className="rounded-2xl border border-primary/20 bg-gradient-to-b from-[#FFFFF0] to-sage/20 p-4 space-y-3">
+                  <div className="rounded-2xl border border-primary/20 bg-gradient-to-b from-white to-container/30 p-4 space-y-3">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-1.5 text-xs font-bold text-slate-800">
                         <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
@@ -404,8 +404,8 @@ export default function RoleSwitcher({ onOpenReportModal, currentRole, onRoleCha
                     <div className="flex items-center gap-2">
                       <Clock className="w-5 h-5 text-primary" />
                       <div>
-                        <h4 className="font-extrabold text-slate-800 text-sm">Daily MBG Arrival Log</h4>
-                        <p className="text-[11px] text-slate-500">Pemeriksaan &lt;2 Menit oleh Satgas Sekolah</p>
+                        <h4 className="font-extrabold text-slate-800 text-sm">Catatan Pemeriksaan Makanan</h4>
+                        <p className="text-[11px] text-slate-500">Pemeriksaan kondisi makanan saat tiba oleh petugas</p>
                       </div>
                     </div>
                     <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">
@@ -455,20 +455,20 @@ export default function RoleSwitcher({ onOpenReportModal, currentRole, onRoleCha
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <Clock className="w-4 h-4 text-tangerine" />
-                        <h4 className="font-extrabold text-slate-800 text-sm">Strict Surplus Hub</h4>
+                        <h4 className="font-extrabold text-slate-800 text-sm">Penyaluran Porsi Berlebih</h4>
                       </div>
                       <span className="text-[10px] font-extrabold text-tangerine bg-tangerine-50 px-2 py-0.5 rounded-full border border-tangerine/30">
-                        38 Menit Tersisa (&lt;1 Jam)
+                        Segera Disalurkan Hari Ini
                       </span>
                     </div>
 
                     <div className="p-3 rounded-2xl bg-gradient-to-r from-tangerine-50 to-white border border-tangerine/20 flex items-center justify-between gap-3 text-xs">
                       <div>
                         <p className="font-bold text-slate-800">
-                          {surplusClaimed ? '0 Porsi Tersisa' : '12 Porsi Tersegel Belum Diambil'}
+                          {surplusClaimed ? '0 Porsi Tersisa' : '12 Porsi Masih Bersih & Utuh'}
                         </p>
                         <p className="text-[11px] text-slate-500">
-                          {surplusClaimed ? 'Sudah diredistribusikan aman ke staf.' : 'Siap diklaim untuk staf piket/satpam.'}
+                          {surplusClaimed ? 'Sudah dibagikan secara tertib kepada staf.' : 'Siap dibagikan agar tidak ada makanan mubazir.'}
                         </p>
                       </div>
                       <button
@@ -478,7 +478,7 @@ export default function RoleSwitcher({ onOpenReportModal, currentRole, onRoleCha
                           surplusClaimed ? 'bg-emerald-600 text-white' : 'bg-tangerine text-white hover:bg-tangerine-600'
                         }`}
                       >
-                        {surplusClaimed ? '✓ Selesai' : 'Klaim'}
+                        {surplusClaimed ? '✓ Selesai' : 'Salurkan'}
                       </button>
                     </div>
                   </div>
@@ -488,18 +488,18 @@ export default function RoleSwitcher({ onOpenReportModal, currentRole, onRoleCha
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <Recycle className="w-4 h-4 text-primary" />
-                        <h4 className="font-extrabold text-slate-800 text-sm">Smart Waste Sorting</h4>
+                        <h4 className="font-extrabold text-slate-800 text-sm">Pemilahan Sisa Makanan</h4>
                       </div>
                     </div>
 
                     <div className="grid grid-cols-2 gap-2 text-xs">
-                      <div className="p-3 rounded-xl bg-[#FFFFF0] border border-primary/20">
-                        <p className="font-bold text-primary">Pakan Maggot BSF</p>
+                      <div className="p-3 rounded-xl bg-slate-50 border border-primary/20">
+                        <p className="font-bold text-primary">Pakan Ramah Lingkungan</p>
                         <p className="text-[11px] text-slate-500 mt-0.5">Sisa nasi & lauk pauk protein</p>
                       </div>
 
-                      <div className="p-3 rounded-xl bg-[#FFFFF0] border border-sage/60">
-                        <p className="font-bold text-slate-700">Kompos Organik</p>
+                      <div className="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                        <p className="font-bold text-slate-700">Pupuk Kompos Alami</p>
                         <p className="text-[11px] text-slate-500 mt-0.5">Sisa sayur & kulit buah</p>
                       </div>
                     </div>
@@ -511,7 +511,7 @@ export default function RoleSwitcher({ onOpenReportModal, currentRole, onRoleCha
                     className="w-full py-3 px-4 rounded-2xl bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-all"
                   >
                     <FileDown className="w-4 h-4 text-tangerine" />
-                    <span>Buka & Ekspor Laporan Resmi PDF MBG</span>
+                    <span>Lihat Ringkasan Laporan (PDF)</span>
                   </button>
 
                 </div>

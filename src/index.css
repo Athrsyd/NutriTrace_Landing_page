@@ -2,16 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary: #0D9488;
+  --color-primary-variant: #0F766E;
+  --color-on-primary: #FFFFFF;
+  --color-secondary: #14B8A6;
+  --color-on-secondary: #1E293B;
+  --color-tertiary: #F59E0B;
+  --color-on-tertiary: #1E293B;
+  --color-accent: #F59E0B;
+  --color-container: #CCFBF1;
+  --color-on-container: #1E293B;
+  --color-background: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-on-background: #1E293B;
+  --color-on-surface: #1E293B;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-gray-text: #64748B;
+  --color-gray-light: #E2E8F0;
+
+  /* Android Linear Gradient 315 deg (CSS 135 deg) & 20dp radius */
+  --brand-gradient: linear-gradient(135deg, #134E4A 0%, #115E59 50%, #0F766E 100%);
+  --brand-radius: 20px;
+}
+
 @layer base {
   html {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-    background-color: #FFFFF0;
+    background-color: #F8FAFC;
     color: #1E293B;
     scroll-behavior: smooth;
   }
 
   body {
-    background-color: #FFFFF0;
+    background-color: #F8FAFC;
+    color: #1E293B;
     overflow-x: hidden;
   }
 }
@@ -19,23 +45,29 @@
 @layer components {
   /* Glassmorphism Classes adhering to design specifications */
   .glass-card {
-    @apply backdrop-blur-md bg-white/70 border border-white/60 shadow-glass;
+    @apply backdrop-blur-md bg-white/80 border border-slate-200/80 shadow-glass;
   }
 
   .glass-card-subtle {
-    @apply backdrop-blur-sm bg-white/50 border border-white/40;
+    @apply backdrop-blur-sm bg-white/60 border border-slate-200/60;
   }
 
   .glass-card-hover {
-    @apply backdrop-blur-md bg-white/70 border border-white/60 shadow-glass transition-all duration-300 hover:shadow-glass-hover hover:-translate-y-1 hover:bg-white/85;
+    @apply backdrop-blur-md bg-white/80 border border-slate-200/80 shadow-glass transition-all duration-300 hover:shadow-glass-hover hover:-translate-y-1 hover:bg-white/95;
   }
 
   .glass-pill {
-    @apply backdrop-blur-md bg-white/80 border border-white/60 shadow-sm;
+    @apply backdrop-blur-md bg-white/90 border border-slate-200/80 shadow-xs;
   }
 
   .tag-badge {
     @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase;
+  }
+
+  /* Android XML Gradient Box with 20px corners */
+  .brand-card-gradient {
+    background: linear-gradient(135deg, #134E4A 0%, #115E59 50%, #0F766E 100%);
+    border-radius: 20px;
   }
 }
 
@@ -45,16 +77,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #FFFFF0;
+  background: #F8FAFC;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C3D0AB;
+  background: #CCFBF1;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #8AA624;
+  background: #0D9488;
 }
 
 /* Keyframe animations for subtle ambient floating */

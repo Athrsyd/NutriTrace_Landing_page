@@ -17,41 +17,41 @@ export default function CircularEconomy() {
   const loopStages = [
     {
       id: 1,
-      name: "Katering MBG",
-      role: "Suplai Bergizi",
-      desc: "Bento steril dengan label alergen lengkap.",
+      name: "Penyedia Makanan",
+      role: "Menu Sehat",
+      desc: "Makanan bergizi disiapkan secara bersih dan higienis.",
       icon: Utensils,
       color: "bg-primary/10 text-primary",
     },
     {
       id: 2,
-      name: "QC Satgas",
-      role: "Uji < 2 Menit",
-      desc: "Verifikasi suhu (>60°C) & segel fisik.",
+      name: "Petugas Sekolah",
+      role: "Pemeriksaan",
+      desc: "Memastikan makanan tetap hangat dan layak konsumsi.",
       icon: ShieldCheck,
-      color: "bg-sage text-slate-800",
+      color: "bg-container text-slate-800",
     },
     {
       id: 3,
-      name: "Siswa MBG",
-      role: "Piring Bersih",
-      desc: "Foto piring habis, kumpulkan poin & streak.",
+      name: "Siswa Sekolah",
+      role: "Makan Lahap",
+      desc: "Menikmati dan menghabiskan makanan tanpa ada sisa.",
       icon: Sparkles,
       color: "bg-tangerine/15 text-tangerine",
     },
     {
       id: 4,
-      name: "Maggot BSF",
-      role: "Biokonversi",
-      desc: "Residu diolah jadi pakan larva & pupuk.",
+      name: "Pengolahan Sisa",
+      role: "Daur Ulang",
+      desc: "Sisa tak termakan diolah jadi pupuk dan pakan alami.",
       icon: Bug,
       color: "bg-primary/20 text-primary-800",
     },
     {
       id: 5,
-      name: "Koperasi",
-      role: "Kas Reward",
-      desc: "Hasil penjualan mendanai voucer siswa.",
+      name: "Apresiasi Sekolah",
+      role: "Hadiah Siswa",
+      desc: "Hasil daur ulang mendukung hadiah bagi siswa rajin.",
       icon: Store,
       color: "bg-amber-100 text-amber-800",
     },
@@ -59,19 +59,19 @@ export default function CircularEconomy() {
 
   return (
     <section id="sirkular" className="py-10 lg:py-20  md:py-24 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Header - Concise */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sage/60 border border-primary/20 text-xs font-bold text-primary-800 uppercase tracking-wider">
-            <span>Ekonomi Sirkular Tertutup</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-container border border-primary/20 text-xs font-bold text-primary-800 uppercase tracking-wider">
+            <span>Daur Ulang Ramah Lingkungan</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-800 tracking-tight">
-            Siklus Closed-Loop: Residu Menjadi Hadiah Siswa
+            Siklus Kebaikan: Dari Makanan Sehat Hingga Hadiah Siswa
           </h2>
           <p className="text-sm sm:text-base text-slate-600">
-            Hasil pemilahan residu organik diserap mitra maggot BSF, dananya dialokasikan 
-            kembali ke koperasi untuk mendanai voucer hadiah siswa.
+            Sisa makanan yang dipilah diolah kembali menjadi produk bermanfaat, 
+            dan manfaatnya kembali mendukung kegiatan serta hadiah apresiasi bagi siswa.
           </p>
         </div>
 

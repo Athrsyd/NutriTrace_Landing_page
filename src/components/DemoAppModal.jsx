@@ -26,14 +26,14 @@ export default function DemoAppModal({ isOpen, onClose }) {
           className="relative w-full max-w-xl rounded-3xl bg-white shadow-2xl border border-slate-200 overflow-hidden text-left"
         >
           {/* Header */}
-          <div className="bg-gradient-to-r from-primary to-primary-600 text-white px-6 py-5 flex items-center justify-between">
+          <div className="bg-gradient-to-br from-[#134E4A] via-[#115E59] to-[#0F766E] text-white px-6 py-5 flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-white/15 backdrop-blur-sm flex items-center justify-center">
                 <Smartphone className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h3 className="font-extrabold text-base">Tentang Aplikasi NutriTrace MBG</h3>
-                <p className="text-xs text-primary-100">Inovasi Android Native (Kotlin) & Firebase Cloud</p>
+                <h3 className="font-extrabold text-base">Tentang Aplikasi PeduliMBG</h3>
+                <p className="text-xs text-container/90">Inovasi Android Native (Kotlin) & Firebase Cloud</p>
               </div>
             </div>
             <button
@@ -55,7 +55,7 @@ export default function DemoAppModal({ isOpen, onClose }) {
                 Aplikasi Pendamping Resmi MBG di Sekolah
               </h4>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                NutriTrace dirancang untuk dua jenis pengguna utama di lingkungan sekolah guna menjamin kelayakan gizi dan nol sampah makanan:
+                PeduliMBG dirancang untuk dua jenis pengguna utama di lingkungan sekolah guna menjamin kelayakan gizi dan nol sampah makanan:
               </p>
             </div>
 
@@ -67,29 +67,29 @@ export default function DemoAppModal({ isOpen, onClose }) {
                   <span>Untuk Siswa Sekolah</span>
                 </div>
                 <ul className="space-y-1 text-slate-600 text-[11px]">
-                  <li>• Clean Plate Check-in foto piring habis</li>
-                  <li>• Poin gamifikasi & daily streak 🔥</li>
-                  <li>• Kompetisi peringkat piring bersih antarkelas</li>
-                  <li>• Penukaran voucer belanja di koperasi</li>
+                  <li>• Foto piring bersih sehabis makan</li>
+                  <li>• Kumpulkan poin & rekor harian 🔥</li>
+                  <li>• Kekompakan kelas piring bersih</li>
+                  <li>• Penukaran hadiah menarik di koperasi</li>
                 </ul>
               </div>
 
               <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
                 <div className="flex items-center gap-2 font-bold text-slate-800">
                   <ShieldCheck className="w-4 h-4 text-tangerine" />
-                  <span>Untuk PIC Sekolah</span>
+                  <span>Untuk Petugas Sekolah</span>
                 </div>
                 <ul className="space-y-1 text-slate-600 text-[11px]">
-                  <li>• Input QC kedatangan katering &lt; 2 menit</li>
-                  <li>• Monitoring suhu makanan & label alergen</li>
-                  <li>• Strict Surplus Hub (redistribusi &lt; 1 jam)</li>
-                  <li>• Ekspor rekapitulasi laporan resmi PDF</li>
+                  <li>• Pemeriksaan makanan tiba dengan praktis</li>
+                  <li>• Pastikan kehangatan dan kebersihan kemasan</li>
+                  <li>• Penyaluran porsi lebih agar tidak terbuang</li>
+                  <li>• Lihat dan cetak ringkasan laporan PDF</li>
                 </ul>
               </div>
             </div>
 
             {/* Architecture Highlights */}
-            <div className="p-4 rounded-2xl bg-[#FFFFF0] border border-sage/70 space-y-2 text-xs">
+            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 text-xs">
               <div className="flex items-center gap-2 font-bold text-slate-800">
                 <Layers className="w-4 h-4 text-primary" />
                 <span>Arsitektur Rekayasa Perangkat Lunak (SDLC Waterfall)</span>
@@ -125,7 +125,7 @@ export default function DemoAppModal({ isOpen, onClose }) {
               </a>
               <button
                 onClick={() => {
-                  alert('Versi build APK Android Native NutriTrace sedang dalam tahap sertifikasi piloting SMKN 26 Jakarta!');
+                  alert('Versi build APK Android Native PeduliMBG sedang dalam tahap sertifikasi piloting SMKN 26 Jakarta!');
                   onClose();
                 }}
                 className="py-3 px-4 rounded-xl text-center bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition-colors flex items-center justify-center gap-1.5"

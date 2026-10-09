@@ -24,70 +24,70 @@ export default function ProblemSolution() {
   const challenges = [
     {
       id: 1,
-      tag: "HULU",
-      title: "Verifikasi Mutu Katering",
-      problem: "Risiko makanan basi, porsi kurang, atau kemasan cacat tanpa bukti digital.",
-      solution: "QC Digital <2 Menit: Cek suhu probe (>60°C), segel boks, & catatan alergen.",
+      tag: "SAAT TIBA",
+      title: "Pemeriksaan Makanan Baru Tiba",
+      problem: "Risiko makanan dingin, basi, atau kemasan rusak jika tidak diperiksa terlebih dahulu.",
+      solution: "Pemeriksaan Cepat & Mudah: Memastikan makanan tetap hangat, kemasan rapi, dan aman disantap.",
       img: "/images/mbg_qc_arrival.jpg",
-      status: "Uji Cepat Terstandar",
+      status: "Makanan Aman & Higienis",
     },
     {
       id: 2,
-      tag: "KONSUMSI",
-      title: "Pencegahan Food Waste",
-      problem: "Banyak makanan MBG bersisa di tempat sampah jika tidak dihabiskan siswa.",
-      solution: "Clean Plate Check-in: Gamifikasi foto piring habis berhadiah poin koperasi.",
+      tag: "SAAT MAKAN",
+      title: "Mencegah Makanan Bersisa",
+      problem: "Sayur dan lauk sering tersisa di piring dan terbuang ke tempat sampah sekolah.",
+      solution: "Gerakan Piring Bersih: Mengajak siswa bangga menghabiskan makanan lewat apresiasi yang menyenangkan.",
       img: "/images/mbg_clean_plate.jpg",
-      status: "Zero Sisa Piring",
+      status: "Piring Bersih Tanpa Sisa",
     },
     {
       id: 3,
-      tag: "HILIR",
-      title: "Sirkularitas Residu Pangan",
-      problem: "Sisa sampah organik membusuk di TPA dan menghasilkan gas rumah kaca metana.",
-      solution: "Daur Ulang Sirkular: 100% sisa organik dialihkan jadi pakan maggot BSF & kompos.",
+      tag: "SETELAH MAKAN",
+      title: "Pemanfaatan Sisa Makanan",
+      problem: "Sisa makanan yang menumpuk di tempat sampah menimbulkan bau tidak sedap dan mengotori lingkungan.",
+      solution: "Daur Ulang Ramah Lingkungan: Sisa makanan dipilah dan diolah menjadi pupuk kompos serta pakan alami.",
       img: "/images/mbg_maggot_waste.jpg",
-      status: "Nilai Kas Koperasi",
+      status: "Bermanfaat & Bebas Bau",
     },
   ];
 
   const comparisonRows = [
     {
-      feature: "QC Kedatangan Katering",
-      withoutApp: "Cek manual tanpa rekaman suhu; risiko basi tidak terdeteksi dini.",
-      withApp: "Formulir digital <2 menit, uji suhu digital probe, foto segel tersimpan.",
+      feature: "Pemeriksaan Makanan Tiba",
+      withoutApp: "Hanya dilihat sekilas; risiko makanan dingin atau basi tidak diketahui sejak awal.",
+      withApp: "Pencatatan praktis; kondisi hangat dan kebersihan kemasan langsung tercatat rapi.",
     },
     {
       feature: "Porsi Makanan Berlebih",
-      withoutApp: "Dibiarkan menumpuk hingga basi atau dibuang sembarangan.",
-      withApp: "Strict Surplus Hub: redistribusi tertib dalam jendela <1 jam.",
+      withoutApp: "Dibiarkan menumpuk hingga basi atau terbuang sia-sia.",
+      withApp: "Langsung disalurkan kepada yang membutuhkan sebelum dingin.",
     },
     {
-      feature: "Perilaku Konsumsi Siswa",
-      withoutApp: "Pasif, sisa sayur/lauk menumpuk di tempat sampah kelas.",
-      withApp: "Gamifikasi Clean Plate, daily streak 🔥, & leaderboard antarkelas.",
+      feature: "Kebiasaan Makan Siswa",
+      withoutApp: "Siswa sering memilih-milih dan menyisakan makanan di piring kelas.",
+      withApp: "Siswa lebih semangat menghabiskan makanannya berkat apresiasi positif.",
     },
     {
-      feature: "Sampah Organik Sekolah",
-      withoutApp: "Bercampur sampah plastik langsung dibuang ke TPA kota.",
-      withApp: "Biokonversi 100% jadi pakan larva maggot BSF & kas koperasi.",
+      feature: "Penanganan Sisa Makanan",
+      withoutApp: "Dibuang campur aduk ke tempat sampah hingga menumpuk dan berbau.",
+      withApp: "Dipilah dan diolah menjadi pupuk kompos yang menyuburkan kebun sekolah.",
     },
   ];
 
   return (
     <section id="solusi" className="py-20 md:py-24 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Header - Concise */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sage/60 border border-primary/20 text-xs font-bold text-primary-800 uppercase tracking-wider">
-            <span>Urgensi & Solusi</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-container border border-primary/20 text-xs font-bold text-primary-800 uppercase tracking-wider">
+            <span>Tantangan & Solusi</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-800 tracking-tight">
-            Dari Hulu Katering Hingga Hilir Bebas Sampah
+            Mengubah Kebiasaan Makan Jadi Sehat & Bertanggung Jawab
           </h2>
           <p className="text-sm sm:text-base text-slate-600">
-            NutriTrace menggantikan prosedur manual dengan sistem kendali digital yang ringkas dan terukur.
+            PeduliMBG membantu sekolah memastikan makanan bergizi disantap dengan lahap tanpa menyisakan sampah.
           </p>
         </div>
 
@@ -158,7 +158,7 @@ export default function ProblemSolution() {
             <div>
               <span className="text-[11px] font-bold uppercase tracking-wider text-primary">Perbandingan Cepat</span>
               <h3 className="text-xl sm:text-2xl font-extrabold text-slate-800">
-                Mengapa Sekolah Membutuhkan NutriTrace?
+                Mengapa Sekolah Membutuhkan PeduliMBG?
               </h3>
             </div>
 
@@ -171,7 +171,7 @@ export default function ProblemSolution() {
                     : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
-                Dengan NutriTrace
+                Dengan PeduliMBG
               </button>
               <button
                 onClick={() => setActiveTab('without')}
@@ -181,7 +181,7 @@ export default function ProblemSolution() {
                     : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
-                Tanpa NutriTrace
+                Tanpa PeduliMBG
               </button>
             </div>
           </div>
@@ -242,12 +242,12 @@ export default function ProblemSolution() {
                             </p>
                           </div>
 
-                          {/* Dengan NutriTrace */}
+                          {/* Dengan PeduliMBG */}
                           <div className="p-3 rounded-xl bg-emerald-50/50 border border-emerald-100">
                             <div className="flex items-center gap-1.5 mb-1 text-emerald-800">
                               <Check className="w-3.5 h-3.5 text-emerald-600" />
                               <span className="text-[11px] font-bold uppercase tracking-wide">
-                                Dengan NutriTrace
+                                Dengan PeduliMBG
                               </span>
                             </div>
                             <p className="text-xs text-slate-800 pl-5 leading-relaxed font-medium">
@@ -270,7 +270,7 @@ export default function ProblemSolution() {
                 <tr className="border-b border-slate-200 text-slate-400 uppercase text-[11px] font-bold">
                   <th className="py-2.5 px-3">Aspek</th>
                   <th className="py-2.5 px-3 text-rose-700 bg-rose-50/50 rounded-t-lg">Konvensional</th>
-                  <th className="py-2.5 px-3 text-primary-700 bg-primary-50/50 rounded-t-lg">Dengan NutriTrace</th>
+                  <th className="py-2.5 px-3 text-primary-700 bg-primary-50/50 rounded-t-lg">Dengan PeduliMBG</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">

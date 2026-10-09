@@ -30,17 +30,17 @@ export default function ReportModal({ isOpen, onClose }) {
           className="relative w-full max-w-3xl rounded-3xl bg-white shadow-2xl border border-slate-200 overflow-hidden text-left"
         >
           {/* Header Bar */}
-          <div className="bg-slate-900 text-white px-6 py-4 flex items-center justify-between">
+          <div className="bg-gradient-to-br from-[#134E4A] via-[#115E59] to-[#0F766E] text-white px-6 py-4 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <FileText className="w-5 h-5 text-tangerine" />
+              <FileText className="w-5 h-5 text-accent" />
               <div>
                 <h3 className="font-bold text-sm">Dokumen Rekapitulasi Audit MBG</h3>
-                <p className="text-[11px] text-slate-400">NutriTrace Local Report Generator (PDF / Print Ready)</p>
+                <p className="text-[11px] text-container/90">PeduliMBG Local Report Generator (PDF / Print Ready)</p>
               </div>
             </div>
             <button
               onClick={onClose}
-              className="p-1.5 rounded-xl hover:bg-slate-800 text-slate-400 hover:text-white transition-colors"
+              className="p-1.5 rounded-xl hover:bg-white/15 text-white/80 hover:text-white transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
@@ -189,7 +189,7 @@ export default function ReportModal({ isOpen, onClose }) {
               </button>
               <button
                 onClick={() => {
-                  alert('Laporan PDF resmi MBG NutriTrace berhasil diunduh ke gawai Anda!');
+                  alert('Laporan PDF resmi MBG PeduliMBG berhasil diunduh ke gawai Anda!');
                   onClose();
                 }}
                 className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-primary hover:bg-primary-600 transition-colors shadow-xs"

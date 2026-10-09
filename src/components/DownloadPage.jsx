@@ -47,9 +47,9 @@ export default function DownloadPage({ onBackToHome }) {
       // Create a downloadable mock text/info file so user browser triggers a download
       const element = document.createElement("a");
       const file = new Blob([
-        `NutriTrace Android Native App v1.2.0\n` +
+        `PeduliMBG Android Native App v1.2.0\n` +
         `Build Date: Oktober 2026\n` +
-        `Package: com.nutritrace.mbg\n` +
+        `Package: com.pedulimbg.app\n` +
         `Target SDK: Android 14 (API 34)\n` +
         `Min SDK: Android 8.0 (API 26)\n` +
         `Checksum SHA256: ${checksum}\n\n` +
@@ -57,7 +57,7 @@ export default function DownloadPage({ onBackToHome }) {
         `Pengembang: Tim eSDoGer's - SMKN 26 Jakarta`
       ], { type: 'text/plain' });
       element.href = URL.createObjectURL(file);
-      element.download = "NutriTrace-v1.2.0-InfoBuild.txt";
+      element.download = "PeduliMBG-v1.2.0-InfoBuild.txt";
       document.body.appendChild(element);
       element.click();
       document.body.removeChild(element);
@@ -68,12 +68,12 @@ export default function DownloadPage({ onBackToHome }) {
 
   const faqs = [
     {
-      q: "Apakah NutriTrace membutuhkan koneksi internet secara terus-menerus?",
-      a: "Tidak. NutriTrace dirancang dengan arsitektur Offline-First (Room Database). Fitur seperti input QC oleh PIC Sekolah atau foto piring siswa tetap dapat berjalan saat sinyal lemah dan otomatis tersinkronisasi ke Cloud begitu perangkat terhubung ke internet."
+      q: "Apakah PeduliMBG membutuhkan koneksi internet secara terus-menerus?",
+      a: "Aplikasi ini dapat digunakan secara optimal dengan koneksi internet (WiFi / 4G). Fitur sinkronisasi data QC oleh PIC Sekolah dan verifikasi foto piring siswa berjalan secara online dan aman ke Cloud server."
     },
     {
       q: "Bagaimana cara beralih antara Mode Siswa dan Mode PIC Sekolah?",
-      a: "Di dalam satu aplikasi NutriTrace, pengguna dapat memilih peran saat pertama kali dibuka. Siswa masuk dengan memilih kelas dan NISN, sedangkan PIC Sekolah masuk menggunakan PIN atau akun petugas resmi yang terdaftar di sekolah."
+      a: "Di dalam satu aplikasi PeduliMBG, pengguna dapat memilih peran saat pertama kali dibuka. Siswa masuk dengan memilih kelas dan NISN, sedangkan PIC Sekolah masuk menggunakan PIN atau akun petugas resmi yang terdaftar di sekolah."
     },
     {
       q: "Apakah aplikasi ini aman dari virus atau malware?",
@@ -81,16 +81,16 @@ export default function DownloadPage({ onBackToHome }) {
     },
     {
       q: "Berapa versi minimum OS Android yang didukung?",
-      a: "NutriTrace mendukung Android versi 8.0 (Oreo / API Level 26) ke atas hingga Android 15 terbaru. Aplikasi dapat berjalan lancar di smartphone dengan RAM mulai dari 2 GB."
+      a: "PeduliMBG mendukung Android versi 8.0 (Oreo / API Level 26) ke atas hingga Android 15 terbaru. Aplikasi dapat berjalan lancar di smartphone dengan RAM mulai dari 2 GB."
     }
   ];
 
   return (
-    <div className="min-h-screen bg-[#FFFFF0] text-slate-800 font-sans selection:bg-primary/20 selection:text-primary-800">
+    <div className="min-h-screen bg-[#F8FAFC] text-[#1E293B] font-sans selection:bg-primary/20 selection:text-primary-800">
       
       {/* Top Header Navigation */}
-      <header className="sticky top-0 z-50 bg-[#FFFFF0]/90 backdrop-blur-md border-b border-sage/50 py-3.5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <header className="sticky top-0 z-50 bg-[#F8FAFC]/90 backdrop-blur-md border-b border-slate-200/80 py-3.5">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between">
           <button
             onClick={onBackToHome}
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white hover:bg-slate-100 border border-slate-200 text-xs sm:text-sm font-bold text-slate-700 transition-colors shadow-2xs cursor-pointer"
@@ -100,9 +100,9 @@ export default function DownloadPage({ onBackToHome }) {
           </button>
 
           <a href="#" onClick={(e) => { e.preventDefault(); onBackToHome(); }} className="flex items-center gap-2.5">
-            <img src="./logo.png" alt="NutriTrace Logo" className="w-8 h-8 rounded-lg" />
+            <img src="./logo.png" alt="PeduliMBG Logo" className="w-8 h-8 rounded-lg" />
             <span className="font-extrabold text-lg tracking-tight text-slate-800">
-              Nutri<span className="text-primary">Trace</span>
+              Peduli<span className="text-primary">MBG</span>
             </span>
           </a>
 
@@ -111,7 +111,7 @@ export default function DownloadPage({ onBackToHome }) {
       </header>
 
       {/* Main Container */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 space-y-16">
+      <main className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-12 md:py-16 space-y-16">
         
         {/* ================= HERO DOWNLOAD SECTION ================= */}
         <section className="relative">
@@ -125,12 +125,12 @@ export default function DownloadPage({ onBackToHome }) {
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-black text-slate-800 tracking-tight leading-tight">
-              Unduh Aplikasi <span className="text-primary">NutriTrace</span>
+              Unduh Aplikasi <span className="text-primary">PeduliMBG</span>
             </h1>
 
             <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
-              Satu aplikasi terpadu untuk <strong>Siswa</strong> dan <strong>PIC Sekolah</strong>. 
-              Kawal mutu Makan Bergizi Gratis, hentikan sisa piring, dan wujudkan sekolah bebas sampah.
+              Satu aplikasi praktis untuk <strong>Siswa</strong> dan <strong>Petugas Sekolah</strong>. 
+              Pastikan makanan bergizi selalu aman, biasakan santap habis tanpa sisa, dan wujudkan sekolah bersih bebas sampah.
             </p>
           </div>
 
@@ -147,7 +147,7 @@ export default function DownloadPage({ onBackToHome }) {
                   <div>
                     <div className="flex items-center gap-2">
                       <h2 className="text-xl sm:text-2xl font-black text-slate-800">
-                        NutriTrace APK
+                        PeduliMBG APK
                       </h2>
                       <span className="px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 text-[10px] font-extrabold uppercase">
                         Terverifikasi
@@ -166,12 +166,12 @@ export default function DownloadPage({ onBackToHome }) {
                     <span className="text-xs sm:text-sm font-black text-slate-800">28.4 MB</span>
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold text-slate-400 uppercase block">Arsitektur</span>
-                    <span className="text-xs sm:text-sm font-black text-slate-800">Kotlin MVVM</span>
+                    <span className="text-[10px] font-bold text-slate-400 uppercase block">Min. Sistem</span>
+                    <span className="text-xs sm:text-sm font-black text-slate-800">Android 8.0+</span>
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold text-slate-400 uppercase block">Dukungan</span>
-                    <span className="text-xs sm:text-sm font-black text-slate-800">Offline-First</span>
+                    <span className="text-[10px] font-bold text-slate-400 uppercase block">Akses Data</span>
+                    <span className="text-xs sm:text-sm font-black text-slate-800">Online</span>
                   </div>
                 </div>
 
@@ -248,31 +248,31 @@ export default function DownloadPage({ onBackToHome }) {
                     Peran 01
                   </span>
                   <h3 className="text-lg font-extrabold text-slate-800">
-                    Mode Siswa (Duta Piring Bersih)
+                    Mode Siswa (Piring Bersih)
                   </h3>
                 </div>
               </div>
 
               <p className="text-xs text-slate-600 leading-relaxed">
-                Dirancang ramah remaja dengan pengalaman gamifikasi yang memotivasi kebiasaan menghabiskan makanan tanpa sisa.
+                Dirancang seru dan menyenangkan untuk membiasakan siswa menikmati dan menghabiskan makanannya tanpa sisa.
               </p>
 
               <div className="space-y-2 pt-2 border-t border-slate-100 text-xs">
                 <div className="flex items-center gap-2 text-slate-700">
                   <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                  <span><strong>Clean Plate Check-in:</strong> Validasi foto piring kosong seusai makan</span>
+                  <span><strong>Foto Piring Bersih:</strong> Bukti foto piring sehabis makan siang</span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-700">
                   <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                  <span><strong>Daily Streak:</strong> Kumpulkan +50 poin setiap hari tanpa putus</span>
+                  <span><strong>Poin & Rekor Harian:</strong> Kumpulkan poin setiap hari saat makan habis</span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-700">
                   <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                  <span><strong>Leaderboard Antarkelas:</strong> Kompetisi kelas zero food waste</span>
+                  <span><strong>Peringkat Antarkelas:</strong> Kekompakan kelas dalam piring bersih</span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-700">
                   <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                  <span><strong>Katalog Reward:</strong> Tukarkan poin dengan hadiah ekstra sekolah</span>
+                  <span><strong>Tukar Hadiah:</strong> Tukarkan poin dengan hadiah bermanfaat di sekolah</span>
                 </div>
               </div>
             </div>
@@ -288,31 +288,31 @@ export default function DownloadPage({ onBackToHome }) {
                     Peran 02
                   </span>
                   <h3 className="text-lg font-extrabold text-slate-800">
-                    Mode PIC Sekolah (Satgas MBG)
+                    Mode Petugas Sekolah
                   </h3>
                 </div>
               </div>
 
               <p className="text-xs text-slate-600 leading-relaxed">
-                Instrumen kendali operasional hulu-ke-hilir untuk tim pengawas sekolah, guru, dan koordinator gizi.
+                Alat praktis bagi bapak/ibu guru dan petugas sekolah untuk memeriksa makanan dan mengelola kegiatan santap siang.
               </p>
 
               <div className="space-y-2 pt-2 border-t border-slate-100 text-xs">
                 <div className="flex items-center gap-2 text-slate-700">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span><strong>QC Suhu Kedatangan:</strong> Uji digital probe (&gt;60°C) dalam &lt;2 menit</span>
+                  <span><strong>Pemeriksaan Makanan:</strong> Cek kehangatan dan kebersihan kemasan boks tiba</span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-700">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span><strong>Strict Surplus Hub:</strong> Redistribusi porsi berlebih dalam jendela &lt;1 jam</span>
+                  <span><strong>Penyaluran Porsi Lebih:</strong> Salurkan makanan lebih yang masih utuh dan bersih</span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-700">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span><strong>Pencatatan Residu:</strong> Timbang sisa organik ke biopon maggot BSF</span>
+                  <span><strong>Daur Ulang Sisa:</strong> Catat sisa makanan yang diolah jadi pupuk & pakan</span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-700">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span><strong>Ekspor Laporan Resmi:</strong> Cetak rekapitulasi mutu untuk SPJ Bappeda</span>
+                  <span><strong>Ringkasan Laporan:</strong> Pantau kebiasaan makan dan cetak laporan PDF</span>
                 </div>
               </div>
             </div>
@@ -362,7 +362,7 @@ export default function DownloadPage({ onBackToHome }) {
                 Pilih Peran & Siap Dipakai
               </h3>
               <p className="text-xs text-slate-500 leading-relaxed">
-                Buka NutriTrace di smartphone, pilih mode Siswa atau PIC Sekolah, dan aplikasi siap digunakan tanpa instalasi tambahan.
+                Buka PeduliMBG di smartphone, pilih mode Siswa atau PIC Sekolah, dan aplikasi siap digunakan tanpa instalasi tambahan.
               </p>
             </div>
           </div>
@@ -392,7 +392,7 @@ export default function DownloadPage({ onBackToHome }) {
               </li>
               <li className="flex items-center justify-between">
                 <span className="text-slate-400">Konektivitas</span>
-                <span className="font-bold text-slate-800">Offline-First (WiFi / 4G saat sinkron)</span>
+                <span className="font-bold text-slate-800">Online (WiFi / 4G saat sinkron)</span>
               </li>
             </ul>
           </div>
@@ -480,9 +480,9 @@ export default function DownloadPage({ onBackToHome }) {
 
       {/* Download Page Footer */}
       <footer className="bg-slate-900 text-slate-400 py-10 border-t border-slate-800 mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3 text-xs">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-center space-y-3 text-xs">
           <p>
-            © 2026 <strong className="text-white">NutriTrace</strong>. Dikembangkan oleh{' '}
+            © 2026 <strong className="text-white">PeduliMBG</strong>. Dikembangkan oleh{' '}
             <strong className="text-white">Tim eSDoGer&apos;s</strong> (SMKN 26 Jakarta).
           </p>
           <p className="text-[11px] text-slate-500">
