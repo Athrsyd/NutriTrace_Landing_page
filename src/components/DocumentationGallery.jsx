@@ -74,16 +74,16 @@ export default function DocumentationGallery() {
     : galleryItems.filter(item => item.category === activeFilter);
 
   return (
-    <section id="dokumentasi" className="py-10 lg:py-20 md:py-24 relative">
+    <section id="dokumentasi" className="scroll-mt-24 py-12 md:py-16 relative">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Section Header with concise text */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
           <div className="space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-container border border-primary/20 text-xs font-bold text-primary-800 uppercase tracking-wider">
+            {/* <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-container border border-primary/20 text-xs font-bold text-primary-800 uppercase tracking-wider">
               <Camera className="w-3.5 h-3.5 text-primary" />
               <span>Dokumentasi Kegiatan Sekolah</span>
-            </div>
+            </div> */}
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-800 tracking-tight">
               Galeri Aksi Nyata di Sekolah
             </h2>
@@ -205,7 +205,7 @@ export default function DocumentationGallery() {
                         <MapPin className="w-3 h-3 text-primary" />
                         <span>{item.location}</span>
                       </div>
-                      <span className="font-bold text-primary group-hover:underline">Lihat Detail →</span>
+                      {/* <span className="font-bold text-primary group-hover:underline">Lihat Detail →</span> */}
                     </div>
                   </div>
                 </motion.div>

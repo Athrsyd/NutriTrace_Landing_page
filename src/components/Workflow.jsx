@@ -7,15 +7,12 @@ import {
   Recycle, 
   ChevronRight, 
   CheckCircle2, 
-  Thermometer, 
-  Flame, 
-  Sparkles,
-  ArrowRight,
-  FileText
+  ArrowRight
 } from 'lucide-react';
 
 export default function Workflow({ onOpenReportModal }) {
   const [activeStep, setActiveStep] = useState(0);
+  const [hoveredStep, setHoveredStep] = useState(null);
 
   const steps = [
     {
@@ -89,90 +86,133 @@ export default function Workflow({ onOpenReportModal }) {
   ];
 
   return (
-    <section id="alur" className="py-20 md:py-24 relative">
+    <section id="alur" className="scroll-mt-24 py-12 md:py-16 relative">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         
-        {/* Section Header - Concise */}
-        <div className="text-center max-w-2xl mx-auto space-y-3 mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-container border border-primary/20 text-xs font-bold text-primary-800 uppercase tracking-wider">
-            <span>Alur Praktis Sekolah</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-800 tracking-tight">
+        {/* Section Header */}
+        <div className="text-center max-w-2xl mx-auto space-y-2 mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-800 tracking-tight">
             Alur Pengelolaan Makanan (4 Langkah Mudah)
           </h2>
-          <p className="text-sm sm:text-base text-slate-600">
-            Panduan sederhana mulai dari makanan tiba, dibagikan ke siswa, hingga penanganan sisa makanan secara bermanfaat.
+          <p className="text-xs sm:text-sm text-slate-600">
+            Arahkan kursor untuk melihat ringkasan detail tiap tahapan, atau klik untuk melihat dokumentasi visualnya.
           </p>
         </div>
 
-        {/* Stepper Buttons */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-          {steps.map((step, idx) => {
-            const Icon = step.icon;
-            const isCurrent = activeStep === idx;
-            return (
-              <button
-                key={step.stepNumber}
-                onClick={() => setActiveStep(idx)}
-                className={`text-left p-4 sm:p-5 rounded-2xl transition-all duration-200 border relative flex flex-col justify-between ${
-                  isCurrent
-                    ? 'bg-white border-primary shadow-md shadow-primary/10'
-                    : 'bg-white/60 border-slate-200 hover:bg-white'
-                }`}
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className={`text-[10px] sm:text-xs font-extrabold px-2 py-0.5 rounded-lg ${
-                      isCurrent ? step.activeBg : 'bg-slate-100 text-slate-600'
-                    }`}>
-                      Langkah {step.stepNumber}
-                    </span>
-                    <Icon className={`w-4 h-4 ${isCurrent ? 'text-primary' : 'text-slate-400'}`} />
+        {/* Stepper Pipeline: Tampilan persis, bagian berlebih dapat di-scroll secara horizontal */}
+        <div className="relative overflow-x-auto pb-3 pt-1 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-transparent">
+          <div className="min-w-[920px] flex items-center justify-between gap-2.5 sm:gap-3 p-3 sm:p-4 rounded-3xl bg-white/90 backdrop-blur-md border border-slate-200/90 shadow-glass">
+            {steps.map((step, idx) => {
+              const Icon = step.icon;
+              const isCurrent = activeStep === idx;
+              return (
+                <React.Fragment key={step.stepNumber}>
+                  {/* Step item */}
+                  <div
+                    className="relative flex-1"
+                    onMouseEnter={() => setHoveredStep(idx)}
+                    onMouseLeave={() => setHoveredStep(null)}
+                  >
+                    <button
+                      type="button"
+                      onClick={() => setActiveStep(idx)}
+                      title={`${step.tagline} - ${step.detailedDesc}`}
+                      className={`w-full group text-left px-4 py-3 sm:py-3.5 rounded-2xl transition-all duration-300 border flex items-center gap-3 relative cursor-pointer ${
+                        isCurrent
+                          ? 'bg-primary text-white border-primary shadow-md shadow-primary/25 scale-[1.02]'
+                          : 'bg-white/70 hover:bg-white text-slate-700 border-slate-200/80 hover:border-primary/40 hover:shadow-xs'
+                      }`}
+                    >
+                      <div className={`w-8 h-8 rounded-xl flex items-center justify-center font-black text-xs shrink-0 transition-transform duration-200 group-hover:scale-110 ${
+                        isCurrent
+                          ? 'bg-white/20 text-white'
+                          : 'bg-primary-50 text-primary border border-primary/20'
+                      }`}>
+                        {step.stepNumber}
+                      </div>
+
+                      <div className="min-w-0 flex-1">
+                        <span className={`text-[10px] font-extrabold uppercase tracking-wider block ${
+                          isCurrent ? 'text-white/80' : 'text-slate-400'
+                        }`}>
+                          Langkah {step.stepNumber}
+                        </span>
+                        <h4 className={`font-extrabold text-xs sm:text-sm truncate leading-snug ${
+                          isCurrent ? 'text-white' : 'text-slate-800 group-hover:text-primary transition-colors'
+                        }`}>
+                          {step.title}
+                        </h4>
+                      </div>
+
+                      <Icon className={`w-4 h-4 shrink-0 transition-transform duration-200 group-hover:rotate-6 ${
+                        isCurrent ? 'text-white' : 'text-slate-400 group-hover:text-primary'
+                      }`} />
+                    </button>
                   </div>
-                  <h4 className="font-extrabold text-xs sm:text-sm text-slate-800 leading-snug">
-                    {step.title}
-                  </h4>
-                  <p className="text-[11px] text-slate-500 mt-1 leading-relaxed">
-                    {step.shortDesc}
-                  </p>
-                </div>
-              </button>
-            );
-          })}
+
+                  {/* Arrow connector between steps */}
+                  {idx < steps.length - 1 && (
+                    <div className="flex items-center justify-center shrink-0 text-slate-400 px-1">
+                      <ArrowRight className="w-5 h-5 text-slate-400" />
+                    </div>
+                  )}
+                </React.Fragment>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Hover Detail Preview Bar */}
+        <div className="min-h-[28px] my-2 flex items-center justify-center">
+          <AnimatePresence>
+            {hoveredStep !== null && (
+              <motion.div
+                key={hoveredStep}
+                initial={{ opacity: 0, y: -4 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -4 }}
+                transition={{ duration: 0.15 }}
+                className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-900/90 text-white text-xs shadow-md backdrop-blur-sm"
+              >
+                <span className="text-emerald-300 font-bold">{steps[hoveredStep].tagline}:</span>
+                <span className="text-slate-200">{steps[hoveredStep].shortDesc}</span>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
 
         {/* Inspection Card with Real Documentary Photo */}
-        <div className="mt-8">
+        <div>
           <AnimatePresence mode="wait">
             <motion.div
               key={activeStep}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3 }}
-              className="rounded-3xl p-6 sm:p-8 backdrop-blur-md bg-white/90 border border-white/70 shadow-glass"
+              initial={{ opacity: 0, x: -25 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 25 }}
+              transition={{ duration: 0.25, ease: 'easeOut' }}
+              className="rounded-3xl p-6 sm:p-8 backdrop-blur-md bg-white border border-slate-200/90 shadow-glass"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
                 
                 {/* Left Description & Metrics */}
-                <div className="lg:col-span-7 space-y-4">
-                  <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-primary-50 text-primary text-xs font-bold border border-primary/20">
-                    <Sparkles className="w-3.5 h-3.5" />
-                    <span>{steps[activeStep].tagline}</span>
+                <div className="lg:col-span-7 space-y-4 sm:space-y-5">
+                  <div className="space-y-1.5">
+                    <span className="text-xs font-bold uppercase tracking-wider text-primary">
+                      {steps[activeStep].tagline}
+                    </span>
+                    <h3 className="text-xl sm:text-2xl font-extrabold text-slate-800">
+                      {steps[activeStep].stepNumber}. {steps[activeStep].title}
+                    </h3>
                   </div>
 
-                  <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-800">
-                    {steps[activeStep].stepNumber}. {steps[activeStep].title}
-                  </h3>
-
-                  <p className="text-sm text-slate-600 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                     {steps[activeStep].detailedDesc}
                   </p>
 
                   {/* 3 Parameter Chips */}
-                  <div className="grid grid-cols-3 gap-2.5 pt-2">
+                  <div className="grid grid-cols-3 gap-2.5 sm:gap-3 pt-1">
                     {steps[activeStep].metrics.map((metric, i) => (
-                      <div key={i} className="p-3 rounded-xl bg-slate-50 border border-slate-200 text-center sm:text-left">
+                      <div key={i} className="p-3 rounded-xl bg-slate-50 border border-slate-200/80 text-center sm:text-left">
                         <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
                           {metric.label}
                         </span>
@@ -183,31 +223,23 @@ export default function Workflow({ onOpenReportModal }) {
                     ))}
                   </div>
 
-                  {/* Stepper navigation */}
-                  <div className="flex flex-wrap items-center gap-2 pt-2">
+                  {/* Stepper navigation buttons */}
+                  <div className="flex flex-wrap items-center gap-2.5 pt-2">
                     <button
+                      type="button"
                       onClick={() => setActiveStep((prev) => (prev > 0 ? prev - 1 : steps.length - 1))}
-                      className="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition-colors"
+                      className="px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition-colors cursor-pointer"
                     >
                       ← Sebelumnya
                     </button>
                     <button
+                      type="button"
                       onClick={() => setActiveStep((prev) => (prev < steps.length - 1 ? prev + 1 : 0))}
-                      className="inline-flex items-center gap-1 px-4 py-1.5 rounded-xl text-xs font-bold text-white bg-primary hover:bg-primary-600 transition-colors shadow-xs"
+                      className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-primary hover:bg-primary-600 transition-colors shadow-xs cursor-pointer"
                     >
                       <span>Langkah Berikutnya</span>
-                      <ChevronRight className="w-3.5 h-3.5" />
+                      <ChevronRight className="w-4 h-4" />
                     </button>
-
-                    {onOpenReportModal && (
-                      <button
-                        onClick={onOpenReportModal}
-                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 bg-white border border-slate-300 hover:bg-slate-50 transition-colors shadow-xs sm:ml-auto"
-                      >
-                        <FileText className="w-3.5 h-3.5 text-tangerine" />
-                        <span>Lihat Dokumen Laporan (PDF)</span>
-                      </button>
-                    )}
                   </div>
                 </div>
 
@@ -219,9 +251,6 @@ export default function Workflow({ onOpenReportModal }) {
                       alt={steps[activeStep].title}
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute top-3 left-3 bg-slate-900/70 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-full">
-                      Dokumentasi Lapangan
-                    </div>
                   </div>
                   <div className="p-3 bg-white text-xs text-slate-600 font-medium border-t border-slate-200 flex items-center justify-between">
                     <span>{steps[activeStep].imgCaption}</span>

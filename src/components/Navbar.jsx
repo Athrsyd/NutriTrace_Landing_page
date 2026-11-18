@@ -17,10 +17,9 @@ export default function Navbar({ onOpenDemoModal, onNavigateToDownload }) {
   const navLinks = [
     { label: 'Tentang', href: '#tentang' },
     { label: 'SDGs', href: '#sdgs' },
-    { label: 'Solusi', href: '#solusi' },
+    // { label: 'Solusi', href: '#solusi' },
     { label: 'Dokumentasi', href: '#dokumentasi' },
     { label: 'Alur', href: '#alur' },
-    { label: 'Kalkulator', href: '#kalkulator' },
     { label: 'Sirkular', href: '#sirkular' },
   ];
 
@@ -43,9 +42,9 @@ export default function Navbar({ onOpenDemoModal, onNavigateToDownload }) {
                 </span>
 
               </div>
-              <span className="text-[11px] font-medium text-slate-500 hidden sm:inline-block">
+              {/* <span className="text-[11px] font-medium text-slate-500 hidden sm:inline-block">
                 Smart QC MBG & Zero Waste App
-              </span>
+              </span> */}
             </div>
           </a>
 

@@ -91,13 +91,13 @@ export default function App() {
         <DocumentationGallery />
 
         {/* The Urgency: Problem & Integrated Solution */}
-        <ProblemSolution />
+        {/* <ProblemSolution /> */}
 
         {/* Operational Workflow: Hulu ke Hilir Stepper */}
         <Workflow onOpenReportModal={() => setReportModalOpen(true)} />
 
         {/* Interactive Waste & Impact Calculator */}
-        <ImpactCalculator />
+        {/* <ImpactCalculator /> */}
 
         {/* Circular Economy: Closed-loop ecosystem */}
         <CircularEconomy />

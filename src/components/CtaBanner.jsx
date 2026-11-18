@@ -4,7 +4,7 @@ import { Sparkles, ArrowRight, ShieldCheck, HeartHandshake, Leaf, Trophy } from 
 
 export default function CtaBanner({ onOpenDemoModal, onCalculatorClick, onNavigateToDownload }) {
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden">
+    <section className="py-10 md:py-16 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         
         <div className="relative rounded-[20px] p-8 sm:p-12 md:p-16 overflow-hidden bg-gradient-to-br from-[#134E4A] via-[#115E59] to-[#0F766E] text-white shadow-2xl shadow-primary/25 border border-white/10">
@@ -16,10 +16,10 @@ export default function CtaBanner({ onOpenDemoModal, onCalculatorClick, onNaviga
           <div className="relative z-10 max-w-3xl mx-auto text-center space-y-6">
             
             {/* Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-xs font-bold text-white uppercase tracking-wider">
+            {/* <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-xs font-bold text-white uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5 text-accent" />
               <span>Gerakan Sekolah Bebas Sampah Makanan</span>
-            </div>
+            </div> */}
 
             {/* Headline */}
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-[1.2]">
@@ -42,17 +42,17 @@ export default function CtaBanner({ onOpenDemoModal, onCalculatorClick, onNaviga
                 <span>Unduh Aplikasi PeduliMBG Sekarang</span>
               </button>
 
-              <button
+              {/* <button
                 onClick={onCalculatorClick}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-[16px] bg-white/15 hover:bg-white/25 backdrop-blur-md text-white font-bold text-base border border-white/30 transition-all duration-300"
               >
                 <span>Hitung Potensi Sekolah</span>
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </button> */}
             </div>
 
             {/* Value bullets */}
-            <div className="pt-6 border-t border-white/20 flex flex-wrap items-center justify-center gap-6 text-xs text-container/90 font-medium">
+            {/* <div className="pt-6 border-t border-white/20 flex flex-wrap items-center justify-center gap-6 text-xs text-container/90 font-medium">
               <div className="flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4 text-accent" />
                 <span>Tanpa Biaya Tambahan Anggaran</span>
@@ -65,7 +65,7 @@ export default function CtaBanner({ onOpenDemoModal, onCalculatorClick, onNaviga
                 <Trophy className="w-4 h-4 text-accent" />
                 <span>Inovasi Karya Pelajar SMKN 26 Jakarta</span>
               </div>
-            </div>
+            </div> */}
 
           </div>
 

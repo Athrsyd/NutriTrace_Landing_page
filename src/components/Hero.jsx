@@ -142,7 +142,7 @@ export default function Hero({ onExploreClick, onCalculatorClick }) {
               <motion.div
                 animate={{ y: [0, -5, 0] }}
                 transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-2 -right-3 sm:-right-5 z-20 p-2 sm:p-2.5 rounded-xl backdrop-blur-md bg-white/95 border border-slate-200/60 shadow-md text-left flex items-center gap-2"
+                className="absolute -top-2 -right-20 rotate-12 sm:-right-35 z-20 p-2 sm:p-2.5 rounded-xl backdrop-blur-md bg-white/95 border border-slate-200/60 shadow-md text-left flex items-center gap-2"
               >
                 <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-primary/20 text-primary-700 flex items-center justify-center shrink-0">
                   <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
@@ -157,7 +157,7 @@ export default function Hero({ onExploreClick, onCalculatorClick }) {
               <motion.div
                 animate={{ y: [0, 5, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
-                className="absolute -bottom-3 -left-3 sm:-left-5 z-20 p-2 sm:p-2.5 rounded-xl backdrop-blur-md bg-white/95 border border-slate-200/60 shadow-md text-left flex items-center gap-2"
+                className="absolute -bottom-3 left-20 sm:-left-5 z-20 p-2 sm:p-2.5 rounded-xl backdrop-blur-md bg-white/95 border border-slate-200/60 shadow-md text-left flex items-center gap-2"
               >
                 <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-tangerine text-white flex items-center justify-center shrink-0">
                   <Flame className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-white" />

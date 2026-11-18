@@ -58,14 +58,11 @@ export default function CircularEconomy() {
   ];
 
   return (
-    <section id="sirkular" className="py-10 lg:py-20  md:py-24 relative">
+    <section id="sirkular" className="scroll-mt-24 py-12 md:py-16 relative">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Header - Concise */}
-        <div className="text-center max-w-2xl mx-auto space-y-3 mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-container border border-primary/20 text-xs font-bold text-primary-800 uppercase tracking-wider">
-            <span>Daur Ulang Ramah Lingkungan</span>
-          </div>
+        <div className="text-center max-w-2xl mx-auto space-y-3 mb-8 sm:mb-10">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-800 tracking-tight">
             Siklus Kebaikan: Dari Makanan Sehat Hingga Hadiah Siswa
           </h2>
@@ -76,7 +73,7 @@ export default function CircularEconomy() {
         </div>
 
         {/* 5-Stage Infographic */}
-        <div className="rounded-3xl p-6 sm:p-8 backdrop-blur-md bg-white/90 border border-white/70 shadow-glass space-y-6">
+        <div className="rounded-3xl p-6 sm:p-10 backdrop-blur-md bg-white/90 border border-white/70 shadow-glass space-y-6 sm:space-y-8">
           
           <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
             {loopStages.map((stage, idx) => {
@@ -112,7 +109,7 @@ export default function CircularEconomy() {
           </div>
 
           {/* Loop Banner */}
-          <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-primary/15 via-sage/30 to-tangerine/15 border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+          {/* <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-primary/15 via-sage/30 to-tangerine/15 border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-primary text-white flex items-center justify-center shrink-0">
                 <RefreshCcw className="w-5 h-5" />
@@ -124,7 +121,7 @@ export default function CircularEconomy() {
             <span className="text-xs font-black px-3 py-1.5 rounded-xl bg-tangerine text-white shrink-0 shadow-xs">
               100% Sirkular Mandiri
             </span>
-          </div>
+          </div> */}
 
         </div>
 

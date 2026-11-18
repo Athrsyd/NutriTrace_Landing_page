@@ -129,16 +129,11 @@ export default function AppOverview() {
   const currentRoleData = rolesData.find((r) => r.id === activeRole) || rolesData[0];
 
   return (
-    <section id="tentang" className="py-16 md:py-20 relative overflow-hidden">
+    <section id="tentang" className="scroll-mt-24 py-12 md:py-16 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* ================= SECTION HEADER ================= */}
-        <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-container border border-primary/20 text-xs font-bold text-primary-800 uppercase tracking-wider">
-            <AppWindow className="w-3.5 h-3.5" />
-            <span>Tentang Aplikasi & Manfaat</span>
-          </div>
-
+        <div className="text-center max-w-3xl mx-auto space-y-3 mb-8 sm:mb-10">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-800 tracking-tight">
             Mengenal <span className="text-primary">PeduliMBG</span>: Solusi Pendamping Makanan Sekolah
           </h2>
@@ -151,7 +146,7 @@ export default function AppOverview() {
         </div>
 
         {/* ================= 1. TUJUAN UTAMA APLIKASI ================= */}
-        <div className="mb-14">
+        <div className="mb-10 sm:mb-12">
           <div className="flex items-center justify-between mb-5">
             <div>
               <span className="text-[11px] font-bold uppercase tracking-wider text-primary">Core Mission</span>
@@ -165,7 +160,7 @@ export default function AppOverview() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
             {appPurposes.map((purpose, index) => {
               const IconComp = purpose.icon;
               return (
@@ -175,34 +170,23 @@ export default function AppOverview() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.35, delay: index * 0.1 }}
-                  className={`rounded-2xl p-6 backdrop-blur-md bg-white/90 border ${purpose.borderColor} shadow-glass hover:shadow-glass-hover transition-all duration-200 flex flex-col justify-between`}
+                  className={`rounded-3xl p-6 sm:p-7 backdrop-blur-md bg-white/90 border ${purpose.borderColor} shadow-glass hover:shadow-glass-hover transition-all duration-200 flex flex-col justify-between`}
                 >
-                  <div className="space-y-3.5">
+                  <div className="space-y-4">
                     <div className="flex items-center justify-between">
-                      <div className={`w-11 h-11 rounded-xl ${purpose.bgColor} border ${purpose.borderColor} flex items-center justify-center`}>
+                      <div className={`w-12 h-12 rounded-2xl ${purpose.bgColor} border ${purpose.borderColor} flex items-center justify-center`}>
                         <IconComp className={`w-5 h-5 ${purpose.textColor}`} />
                       </div>
-                      <span className={`text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full ${purpose.bgColor} ${purpose.textColor} border ${purpose.borderColor}`}>
-                        {purpose.badge}
-                      </span>
                     </div>
 
                     <div>
-                      <h4 className="text-base font-extrabold text-slate-800 mb-1.5">
+                      <h4 className="text-base sm:text-lg font-extrabold text-slate-800 mb-2">
                         {purpose.title}
                       </h4>
-                      <p className="text-xs text-slate-600 leading-relaxed">
+                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                         {purpose.desc}
                       </p>
                     </div>
-                  </div>
-
-                  <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-500">
-                    <span className="flex items-center gap-1.5 text-[11px]">
-                      <CheckCircle2 className={`w-3.5 h-3.5 ${purpose.textColor}`} />
-                      Pilar 0{purpose.id}
-                    </span>
-                    <span className="text-[10px] text-slate-400 font-medium">Berdampak Nyata</span>
                   </div>
                 </motion.div>
               );
@@ -211,24 +195,24 @@ export default function AppOverview() {
         </div>
 
         {/* ================= 2. DUA PERAN UTAMA & FITUR ================= */}
-        <div className="rounded-3xl p-6 sm:p-8 backdrop-blur-md bg-white/95 border border-white/80 shadow-glass">
+        <div className="rounded-3xl p-6 sm:p-10 lg:p-12 backdrop-blur-md bg-white/95 border border-white/80 shadow-glass">
           
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-5 mb-6 border-b border-slate-200">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 pb-6 mb-8 border-b border-slate-200">
             <div>
-              <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary mb-1">
+              <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary mb-1.5">
                 <Users className="w-3.5 h-3.5" />
                 <span>2 Peran Pengguna Utama</span>
               </div>
               <h3 className="text-xl sm:text-2xl font-extrabold text-slate-800">
                 Antarmuka Terintegrasi: Siswa & PIC Sekolah
               </h3>
-              <p className="text-xs text-slate-500 mt-0.5 max-w-xl">
+              <p className="text-xs sm:text-sm text-slate-500 mt-1 max-w-xl">
                 Aplikasi PeduliMBG memiliki 2 alur pengguna utama yang disesuaikan dengan tanggung jawab masing-masing.
               </p>
             </div>
 
             {/* Role Switcher: 2 Roles Only */}
-            <div className="inline-flex p-1 rounded-2xl bg-slate-100 border border-slate-200 self-start md:self-auto">
+            <div className="inline-flex p-1.5 rounded-2xl bg-slate-100 border border-slate-200 self-start md:self-auto">
               {rolesData.map((role) => {
                 const IconComponent = role.icon;
                 const isSelected = activeRole === role.id;
@@ -236,7 +220,7 @@ export default function AppOverview() {
                   <button
                     key={role.id}
                     onClick={() => setActiveRole(role.id)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
+                    className={`flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
                       isSelected
                         ? `${role.color} shadow-xs`
                         : 'text-slate-600 hover:text-slate-900'
@@ -250,15 +234,15 @@ export default function AppOverview() {
             </div>
           </div>
 
-          {/* Active Role Content */}
+          {/* Active Role Content with Horizontal Transition (Fade-in from left to right, Fade-out to right) */}
           <AnimatePresence mode="wait">
             <motion.div
               key={currentRoleData.id}
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.2 }}
-              className="space-y-5"
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 30 }}
+              transition={{ duration: 0.28, ease: 'easeOut' }}
+              className="space-y-6 sm:space-y-7"
             >
               {/* Role Header Banner */}
               <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
@@ -271,9 +255,9 @@ export default function AppOverview() {
                       <h4 className="font-extrabold text-slate-800 text-sm sm:text-base">
                         {currentRoleData.label}
                       </h4>
-                      <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-200/80 text-slate-700">
+                      {/* <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-200/80 text-slate-700">
                         {currentRoleData.badge}
-                      </span>
+                      </span> */}
                     </div>
                     <p className="text-xs text-slate-500 mt-0.5">
                       {currentRoleData.roleDesc}
@@ -281,9 +265,9 @@ export default function AppOverview() {
                   </div>
                 </div>
 
-                <div className="text-xs font-bold text-slate-500 sm:text-right shrink-0">
+                {/* <div className="text-xs font-bold text-slate-500 sm:text-right shrink-0">
                   <span className="text-primary font-black">4 Fitur Khusus</span> untuk peran ini
-                </div>
+                </div> */}
               </div>
 
               {/* 4 Features Grid for this Role */}
