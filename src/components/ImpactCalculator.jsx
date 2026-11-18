@@ -41,7 +41,7 @@ export default function ImpactCalculator() {
 
   const presets = [
     { label: '250 Siswa', count: 250 },
-    { label: '600 Siswa (SMKN 26)', count: 600 },
+    { label: '600 Siswa', count: 600 },
     { label: '1.000 Siswa', count: 1000 },
     { label: '1.500 Siswa', count: 1500 },
   ];
