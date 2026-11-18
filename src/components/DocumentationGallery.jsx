@@ -59,7 +59,7 @@ export default function DocumentationGallery() {
       id: 4,
       category: 'koperasi',
       title: 'Penukaran Hadiah Apresiasi Siswa',
-      location: 'Koperasi SMKN 26 Jakarta',
+      location: 'Koperasi SMKN 26 Jakarta`',
       time: '13:30 WIB',
       badge: 'Hadiah Apresiasi',
       badgeColor: 'bg-tangerine text-white',
